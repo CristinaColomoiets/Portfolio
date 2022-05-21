@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="91" height="83" viewBox="0 0 91 83">
+  <g transform="translate(-43 -21)">
+    <g transform="translate(43 21)" fill="#272727" stroke="#d4aa7d" stroke-width="3">
+      <ellipse cx="45.5" cy="41.5" rx="45.5" ry="41.5" stroke="none"/>
+      <ellipse cx="45.5" cy="41.5" rx="44" ry="40" fill="none"/>
+    </g>
+    <text id="txt" transform="translate(61 77)" fill="#d4aa7d" font-size="38" font-family="Raleway-Regular, Raleway"><tspan x="0" y="0">.CC</tspan></text>
+  </g>
+</svg>
