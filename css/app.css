@@ -366,13 +366,14 @@ body {
 }
 .section__projects-box-foto {
   position: relative;
-  border-radius: 3rem;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .section__projects-overlay {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.6;
   position: absolute;
   top: 0;
   left: 0;
@@ -438,8 +439,7 @@ body {
   gap: 2rem;
 }
 .section__about-img {
-  background-color: red;
-  opacity: 0.5;
+  opacity: 0.6;
   border-radius: 1rem;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
