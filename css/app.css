@@ -535,12 +535,12 @@ body {
   color: var(--color-hover);
 }
 
-.main__arrow {
+.a__arrow {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
 }
-.main__arrow-arrow-up {
+.a__arrow-arrow-up {
   width: 2rem;
   height: 2rem;
   opacity: 0.5;
