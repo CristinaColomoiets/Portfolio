@@ -8,7 +8,10 @@ body{
 .span{
     color: var(--color-hover);
 }
-
+.wrapper{
+    max-width: 1200px;
+    margin: auto;
+}
 .header{
     // border-bottom: 1px solid #d4aa7d91;
 
@@ -119,11 +122,30 @@ body{
 
 
 .section__name{
-    padding-bottom: 10rem;
+    position: relative;
+    padding:5rem 0;
+
+    &::before{
+        content: "";
+        display: block;
+        width:100%;
+        height:100%;
+        background-color: #151314;
+        position:absolute;
+        top:0;
+        z-index: 1;
+        opacity: 0;
+        
+        border-bottom: 1px solid var(--color-line);
+        transform: skew(0, 7deg) translateY(-20%);
+        pointer-events: none;
+    }
 
     &-box-name{
         margin: 15% 0 0 0;
         height: 70vh;
+        position: relative;
+        z-index: 2;
     }
 
     &-h1{
@@ -152,6 +174,9 @@ body{
         align-items: center;
 
         transition: all .5s ease;
+
+        position: relative;
+        z-index: 2;
 
     }
 
@@ -247,20 +272,31 @@ body{
 }
 
 .section__about{
-    padding-bottom: 10rem;
-    //background-color: rgb(255, 157, 0);
+    
+    position: relative;
+    padding:5rem 0;
+
+    &::before{
+        content: "";
+        display: block;
+        width:100%;
+        height:100%;
+        background-color: #151314;
+        position:absolute;
+        top:0;
+        z-index: 1;
+        border-top: 1px solid var(--color-line);
+        border-bottom: 1px solid var(--color-line);
+        transform: skew(0, 7deg);
+        pointer-events: none;
+    }
+
 
     &-title-wrapper{
-        //border-bottom: 1px solid var(--color-line);
-
-        &::after{
-            content: "";
-            height: 1px;
-            display: block;
-            background-color: var(--color-line);
-            transform: skew(0, 7deg);
-            transform-origin: right;
-        }
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
     }
 
     &-h3{
@@ -274,10 +310,13 @@ body{
 
     &-wrapper-grid{
         width: 90%;
+        
         margin: 5rem auto;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
+        position: relative;
+        z-index: 2;
     }
 
     &-img{
@@ -339,14 +378,14 @@ body{
     padding-bottom: 4rem;
     //background-color: cadetblue;
 
-    &-title-wrapper::after{
+   /*  &-title-wrapper::after{
         content: "";
         display: block;
         height: 1px;
         background-color: var(--color-line);
         transform-origin: right;
         transform: skew(0, 7deg);
-    }
+    } */
 
     &-h3{
         width: 90%;
