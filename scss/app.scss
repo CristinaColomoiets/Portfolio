@@ -8,12 +8,14 @@ body{
 .span{
     color: var(--color-hover);
 }
+
 .wrapper{
+    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
+
 .header{
-    // border-bottom: 1px solid #d4aa7d91;
 
     &__container{
         width: 98%;
@@ -84,26 +86,7 @@ body{
         :hover{
             color: var(--color-hover);
         }
-
-        a {
-            //padding: 2rem 0 2rem 0;             //preguntar sobre lineas en hover,por que no funciona el padding.
-        }
     }
-    
-    // Diseño alternativo con linea debajo
-
-    // &__li::after{
-    //     content: "";
-    //     display: block;
-    //     opacity: 0;
-    //     width:100%;
-    //     height:1px;
-    //     background-color: var(--color-hover); 
-    //     transition: all 1s ease;
-    // }
-    // &__li:hover::after{
-    //     opacity: 1;
-    // }
 
     &__a-nav{                     
         // background-color: orange;
@@ -122,45 +105,49 @@ body{
 
 
 .section__name{
+    //background-color: green;
     position: relative;
-    padding:5rem 0;
+    padding: 3rem 0;
+   
 
     &::before{
         content: "";
         display: block;
         width:100%;
-        height:100%;
+        height:90%;
         background-color: #151314;
         position:absolute;
         top:0;
         z-index: 1;
-        opacity: 0;
+        opacity: 1;
         
         border-bottom: 1px solid var(--color-line);
-        transform: skew(0, 7deg) translateY(-20%);
+        border-top: 1px solid var(--color-line);
+        transform: skew(0, 5deg) translateY(10%);
+
         pointer-events: none;
     }
 
     &-box-name{
-        margin: 15% 0 0 0;
-        height: 70vh;
+        //background-color: rgb(38, 83, 4);
+        padding: 20rem 0;
         position: relative;
         z-index: 2;
     }
 
     &-h1{
-        //background-color: rgb(178, 240, 115);
+        //background-color: rgb(115, 205, 240);
         color: var(--color-text);
         font-size: 4em;
         font-weight: 600;
-        margin: 5% 0 0 15%;
+        margin: 5% 0 0 30%;
     }
     &-h2{
         //background-color: chocolate;
         color: var(--color-h2);
         font-size: 6em;
         font-weight: 400;
-        margin: 3% 0 0 20%;
+        margin: 3% 0 0 40%;
     }
 
     &-box-text{
@@ -176,12 +163,13 @@ body{
         transition: all .5s ease;
 
         position: relative;
+        bottom: 5rem;
         z-index: 2;
-
     }
 
     &-p{
         width: 30%;
+        font-size: 1.2em;
 
         &:hover{
             color: var(--color-hover);
@@ -193,36 +181,17 @@ body{
     padding-bottom: 10rem;
     //background-color: cadetblue;
 
-    &-title-wrapper{
-        //background-color: red;
-        //border-bottom: 1px solid var(--color-line);
-
-        &::after{
-            content: "";
-            display: block;
-            height: 1px;
-            background-color: var(--color-line);
-            transform: skew(0, 7deg);
-            transform-origin: right;
-
-            transition: all .5s ease;
-        }
-    }
-
     &-h3{
         width: 90%;
+        max-width: 1200px;
         margin: auto;
         font-size: 2em;
         font-weight: 600;
-        padding: 0 0 1rem 0;
         //background-color: red;
-        
-
-
     }
 
     &-wrapper{
-        width: 90%;
+        width: 100%;
         margin: 5rem auto;
         //background-color: orange;
 
@@ -235,23 +204,28 @@ body{
         position: relative;
         border-radius: 1rem;
         overflow: hidden;
+
+        &:hover .section__projects-p{
+            animation: goOut 2s ease 1 both;
+        }
     }
 
+    &-item{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &-overlay{
         width: 100%;
         height: 100%;
-        background-color: black;
-        opacity: .6;
+        background-color: rgba(0, 0, 0, 0.594);
+        opacity: .9;
         position: absolute;
         top: 0;
         left: 0;
         transition: all 1s ease;
-
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-        align-items: center;
 
         &:hover{
             opacity: 0;
@@ -259,22 +233,34 @@ body{
     }
 
     &-p{
+        color: var(--color-text);
+        text-transform: uppercase;
         font-size: 1.2em;
         font-weight: 600;
-        padding: .5rem 1rem;
-        border: 1px solid var(--color-line);
+        padding: 1.5rem 3rem;
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-btn);
         border-radius: .5rem; 
+        opacity: 0;
+        position: absolute;
     }
 
-    & .boxSeven{
-        grid-column: 1/3;
+    @keyframes goOut{
+        from{
+            opacity: 0;
+            transform: translateY(200%);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0%);
+        }
     }
 }
 
 .section__about{
     
     position: relative;
-    padding:5rem 0;
+    padding: 5rem 0;
 
     &::before{
         content: "";
@@ -287,25 +273,19 @@ body{
         z-index: 1;
         border-top: 1px solid var(--color-line);
         border-bottom: 1px solid var(--color-line);
-        transform: skew(0, 7deg);
+        transform: skew(0, 5deg);
         pointer-events: none;
-    }
-
-
-    &-title-wrapper{
-        max-width: 1200px;
-        margin: auto;
-        position: relative;
-        z-index: 2;
     }
 
     &-h3{
         width: 90%;
+        max-width: 1200px;
         margin: auto;
         font-size: 2em;
         font-weight: 600;
-        padding: 0 0 1rem 0;
-       // background-color: red;
+        z-index: 2;
+        position: relative;
+        //background-color: green;
     }
 
     &-wrapper-grid{
@@ -327,11 +307,10 @@ body{
         grid-row: 1/4;
     }
 
-    
     &-txt-about{
         // background-color: yellow;
         line-height: 2rem;
-        font-size: 1.2em;
+        font-size: 1.5em;
         //background-color: rgb(22, 123, 118);
         transition: all .5s ease;
     
@@ -344,11 +323,18 @@ body{
     }
 
     &-h4{
-        text-align: center;
+        text-align: start;
         font-size: 1.5em;
         font-weight: 600;
         //background-color: rgb(218, 141, 0);
         grid-column: 3/6;
+
+        &::after{
+            content: "";
+            display: block;
+            background-color: var(--color-line);
+            height: 1px;
+        }
 
     }
 
@@ -363,38 +349,39 @@ body{
     }
 
     &-data{
-        font-size: 1.2em;
+        font-size: 1.4em;
         font-weight: 600;
         margin: 0 0 2rem 0;
+
+        transition: all .5s ease;
+
+        &:hover{
+            color: var(--color-hover);
+        }
     }
 
     &-p{
         font-size: 1.1em;
         margin: 0 0 2rem 0;
+
+        transition: all .5s ease;
+
+        &:hover{
+            color: var(--color-hover);
+        }
     }
 }
 
 .section__contactos{
-    padding-bottom: 4rem;
-    //background-color: cadetblue;
-
-   /*  &-title-wrapper::after{
-        content: "";
-        display: block;
-        height: 1px;
-        background-color: var(--color-line);
-        transform-origin: right;
-        transform: skew(0, 7deg);
-    } */
+    padding-bottom: 4rem 0 0 0;
+   
 
     &-h3{
         width: 90%;
+        max-width: 1200px;
         margin: auto;
         font-size: 2em;
         font-weight: 600;
-        padding: 0 0 1rem 0;
-        //background-color: red;
-        //border-bottom: 1px solid #d4aa7d91;
     }
 
     &-wrapper{
@@ -405,15 +392,16 @@ body{
         //background-color: coral;
 
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     &-txt{
         width: 50%;
         //background-color: chartreuse;
         font-size: 1.2em;
+        margin: 0 0 2rem 0;
     }
 
     &-rrss{
@@ -422,18 +410,23 @@ body{
 
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
     &-svg{
         width: 2rem;
         height: 2rem;
-        //margin: 0 0 0 2rem;
+        transition: all .5s ease;
 
         &:hover{
             color: var(--color-hover);
+            transform: scale(1.1);
         }
+    }
+
+    &-p{
+        margin: 0 0 0 1rem;
     }
 }
 
@@ -441,6 +434,7 @@ body{
     position: fixed;
     bottom: 2rem;
     right: 2rem;
+    z-index: 1;
 
     &-arrow-up{
         width: 2rem;
