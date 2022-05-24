@@ -115,7 +115,7 @@ body{
         display: block;
         width:100%;
         height:90%;
-        background-color: #151314;
+        background-color: var(--color-bg2);
         position:absolute;
         top:0;
         z-index: 1;
@@ -141,6 +141,19 @@ body{
         font-size: 4em;
         font-weight: 600;
         margin: 5% 0 0 30%;
+
+        &::before {
+            content: '';
+            display: block;
+            position: relative;
+            top: 2.4rem;
+            right: 40%;
+            width: 100%;
+            height: 4rem;
+            background: linear-gradient(267deg, var(--color-bg2) 0%, var(--color-bg2) 53%, rgba(0,0,0,0) 100%);
+        }
+
+
     }
     &-h2{
         //background-color: chocolate;
@@ -160,7 +173,7 @@ body{
         justify-content: flex-end;
         align-items: center;
 
-        transition: all .5s ease;
+        transition: all 1s ease;
 
         position: relative;
         bottom: 5rem;
@@ -206,7 +219,7 @@ body{
         overflow: hidden;
 
         &:hover .section__projects-p{
-            animation: goOut 2s ease 1 both;
+            animation: goOut 1.5s ease 1 both;
         }
     }
 
@@ -220,15 +233,17 @@ body{
     &-overlay{
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.594);
-        opacity: .9;
+        // background-color: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        opacity: .6;
         position: absolute;
         top: 0;
         left: 0;
         transition: all 1s ease;
 
         &:hover{
-            opacity: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+            opacity: .8;
         }
     }
 
@@ -237,9 +252,9 @@ body{
         text-transform: uppercase;
         font-size: 1.2em;
         font-weight: 600;
-        padding: 1.5rem 3rem;
+        padding: .5rem 1.5rem;
         background-color: var(--color-primary);
-        border: 2px solid var(--color-btn);
+        border: 1px solid var(--color-btn);
         border-radius: .5rem; 
         opacity: 0;
         position: absolute;
@@ -251,7 +266,7 @@ body{
             transform: translateY(200%);
         }
         to{
-            opacity: 1;
+            opacity: .7;
             transform: translateY(0%);
         }
     }
@@ -267,7 +282,7 @@ body{
         display: block;
         width:100%;
         height:100%;
-        background-color: #151314;
+        background-color: var(--color-bg2);
         position:absolute;
         top:0;
         z-index: 1;
