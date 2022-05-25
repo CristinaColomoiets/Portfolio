@@ -199,6 +199,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .header__svg-logo {
   width: 4rem;
@@ -236,11 +237,28 @@ body {
   width: 80%;
   font-size: 1.3em;
 }
+.header__nav-menu.activo {
+  width: 70%;
+  background-color: mediumslateblue;
+  border-radius: 50% 50%;
+  font-size: 1.1em;
+  z-index: 1;
+  position: absolute;
+  top: -88%;
+  right: -9%;
+}
 .header__ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
+}
+.header__ul.activo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rem 7rem;
 }
 .header__li {
   margin: 0 0 0 10%;
@@ -248,6 +266,10 @@ body {
 }
 .header__li :hover {
   color: var(--color-hover);
+}
+.header__li.activo {
+  background-color: #d20000;
+  margin-bottom: 1rem;
 }
 .header__a-nav {
   padding: 0.4rem 1.2rem;

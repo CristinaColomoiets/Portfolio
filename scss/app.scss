@@ -25,6 +25,8 @@ body{
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+
+    position: relative;
   }
 
   &__svg-logo{
@@ -71,11 +73,31 @@ body{
     font-size: 1.3em;
   }
 
+  &__nav-menu.activo{
+    width: 70%;
+    background-color: mediumslateblue;
+    border-radius: 50% 50%;
+    font-size: 1.1em;
+    z-index: 1;
+
+    position: absolute;
+    top: -88%;
+    right: -9%;
+  }
+
   &__ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
+  }
+
+  &__ul.activo{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10rem 7rem;
   }
 
   &__li{
@@ -86,6 +108,11 @@ body{
     :hover {
       color: var(--color-hover);
     }
+  }
+
+  &__li.activo{
+      background-color: rgb(210, 0, 0);
+      margin-bottom: 1rem;
   }
 
   &__a-nav{
