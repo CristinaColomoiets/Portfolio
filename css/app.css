@@ -220,8 +220,8 @@ body {
   height: 6rem;
   border-radius: 50%;
   display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   background-color: var(--color-text);
   display: none;
@@ -594,6 +594,33 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
 }
 
 /*--------------------RESPONSIVE--------------------*/
+@media screen and (max-width: 1750px) {
+  .section__name-h1 {
+    transition: all 0.7s ease;
+    transform: translateX(-20%);
+  }
+}
+@media screen and (max-width: 1450px) {
+  .section__name-h1 {
+    transition: all 0.7s ease;
+    transform: translateX(-15%);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .section__name-box-name {
+    text-align: center;
+  }
+
+  .section__name-h1 {
+    transition: all 0.9s ease;
+    transform: translateX(0%);
+  }
+
+  .section__name-h2 {
+    transition: all 0.9s ease;
+    transform: translateX(0%);
+  }
+}
 @media screen and (max-width: 1170px) {
   .header__container {
     width: 98%;
@@ -609,5 +636,81 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .section__name-box-text {
+    width: 90%;
+    max-width: 25rem;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .section__name-h1 {
+    font-size: 5em;
+  }
+
+  .section__name-h2 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 850px) {
+  .section__name-h1 {
+    font-size: 4em;
+  }
+
+  .section__name-h2 {
+    font-size: 3em;
+  }
+
+  .section__name-box-text {
+    font-size: 0.9em;
+    bottom: 5%;
+  }
+
+  .header__svg-logo {
+    width: 3rem;
+  }
+
+  .header__nav-menu {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  .header__a-nav {
+    padding: 0.3rem 1.1rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  .header__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .header__nav-menu {
+    display: none;
+  }
+
+  .header__box-svg-menu {
+    display: flex;
+    position: absolute;
+    top: -17%;
+    right: -4%;
+  }
+
+  .section__name-h1 {
+    font-size: 3em;
+  }
+
+  .section__name-h2 {
+    font-size: 2em;
+  }
+
+  .section__name-box-text {
+    max-width: 20rem;
+    font-size: 0.8em;
+    bottom: 7%;
   }
 }
