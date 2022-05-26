@@ -200,6 +200,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .header__svg-logo {
   width: 4rem;
@@ -321,6 +322,18 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   font-size: 6em;
   font-weight: 600;
   transform: translateX(-25%);
+  position: relative;
+}
+.section__name-h1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: violet;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  left: 0;
 }
 .section__name-h2 {
   font-size: 5em;
@@ -339,68 +352,6 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   color: var(--color-hover);
 }
 
-/* .section__name{
-    width:100%;
-    // background-color: rgba(255, 0, 0, 0.162);
-    min-height: 80vh;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-
-
-    &::before{
-        content: '';
-        display: block;
-        width:100%;
-        height:88%;
-        background-color: rgba(0, 255, 255, 0.382);
-        background-color: black;
-        position: absolute;
-        top:6%;
-        left:0;
-
-        border-top:1px solid gold;
-        border-bottom:1px solid gold;
-        transform: skewY(4deg);
-    }
-
-    &-box-name{
-    //    background-color: lime;
-       line-height: 4em;
-    }
-
-    &-h1{
-        // background-color: crimson;
-        font-size: 3em;
-        transform: translateX(-25%);
-    }
-    &-h2{
-        // background-color: crimson;
-        font-size: 4em;
-        transform: translateX(25%);
-    }
-
-    &-box-text{
-        max-width: 40rem;
-        width:90%;
-        // background-color: cadetblue;
-        position: absolute;
-        bottom:15%;
-        right: 5%;
-
-    }
-
-    &-p{
-
-        &:hover{
-
-        }
-    }
-} */
 .section__projects {
   padding-bottom: 10rem;
 }
@@ -549,7 +500,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   color: var(--color-hover);
 }
 .section__about-p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0 0 2rem 0;
   transition: all 0.5s ease;
 }
@@ -642,6 +593,17 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     transition: all 0.9s ease;
     transform: translateX(0%);
   }
+
+  .section__projects-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section__projects-box-foto {
+    width: 60%;
+  }
 }
 @media screen and (max-width: 1170px) {
   .header__container {
@@ -673,6 +635,12 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
 
   .section__name-h2 {
     font-size: 4em;
+  }
+
+  .section__about-wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 850px) {
