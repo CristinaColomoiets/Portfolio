@@ -385,7 +385,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   position: relative;
   padding: 5rem 0;
 
-  &::before {
+  &::before{
     content: "";
     display: block;
     width: 100%;
@@ -400,7 +400,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     pointer-events: none;
   }
 
-  &-h3 {
+  &-h3{
     width: 90%;
     max-width: 1200px;
     margin: auto;
@@ -411,34 +411,30 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     //background-color: green;
   }
 
-  &-wrapper-grid {
+  &-wrapper-grid{
     width: 90%;
-
+    max-width: 1200px;
     margin: 5rem auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     position: relative;
     z-index: 2;
   }
 
-  &-img {
+  &-img{
     opacity: 0.5;
     border-radius: 1rem;
-
-    grid-column: 1/3;
-    grid-row: 1/6;
+    width: 40%;
+    max-width: 1200px;
+    margin: 0 3% 0 0;
   }
 
-  &-txt-about {
+  &-txt-about{
     // background-color: yellow;
     line-height: 2rem;
     font-size: 1.5em;
-    //background-color: rgb(22, 123, 118);
     transition: all 0.5s ease;
-
-    grid-column: 3/6;
-    grid-row: 1/2;
 
     &:hover {
       color: var(--color-hover);
@@ -449,8 +445,8 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     text-align: start;
     font-size: 1.5em;
     font-weight: 600;
+    margin: 7% 0;
     //background-color: rgb(218, 141, 0);
-    grid-column: 3/6;
 
     &::after {
       content: "";
@@ -460,21 +456,15 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     }
   }
 
-  &-column-data {
-    //background-color: rgb(33, 112, 4);
-    grid-column: 3/4;
+  &-year{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0 4% 0;
   }
 
-  &-column-name {
-    //background-color: crimson;
-    grid-column: 4/6;
-  }
-
-  &-data {
+  &-data{
     font-size: 1.4em;
     font-weight: 600;
-    margin: 0 0 2rem 0;
-
     transition: all 0.5s ease;
 
     &:hover {
@@ -482,10 +472,8 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     }
   }
 
-  &-p {
+  &-p{
     font-size: 1.2em;
-    margin: 0 0 2rem 0;
-
     transition: all 0.5s ease;
 
     &:hover {
@@ -638,24 +626,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
         font-size: 4em;
     }
 
-  .section__about-wrapper-grid{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-  }
-  .section__about-img{
-    grid-column: 2/6;
-  }
-  .section__about-txt-about{
-    grid-column: 2/6;
-    grid-row: 4/6;
-  }
-  .section__about-h4{
-    grid-column: 2/6;
-  }
-  .section__about-column-data{
-    grid-column: 2/4;
-  }
+
 
 }
 
