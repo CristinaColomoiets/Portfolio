@@ -330,15 +330,45 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   width: 100%;
   height: 100%;
   background: violet;
+  background: #151314;
+  background: linear-gradient(270deg, #151314 100%, #090979 100%, #00d4ff 100%);
   position: absolute;
   bottom: 0;
-  z-index: 2;
   left: 0;
+  z-index: 2;
+  animation: slideRight 4s ease both;
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 .section__name-h2 {
   font-size: 5em;
   font-weight: 600;
   transform: translateX(20%);
+}
+.section__name-h2::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #151314;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: slideLeft 4s ease both;
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 .section__name-box-text {
   width: 90%;
