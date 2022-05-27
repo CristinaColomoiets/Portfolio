@@ -323,20 +323,32 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   font-weight: 600;
   transform: translateX(-25%);
   position: relative;
+  overflow: hidden;
 }
 .section__name-h1::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
-  background: violet;
-  background: #151314;
-  background: linear-gradient(270deg, #151314 100%, #090979 100%, #00d4ff 100%);
+  background: red;
+  background: linear-gradient(90deg, rgba(21, 19, 20, 0) 0%, #151314 100%);
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
-  animation: slideRight 4s ease both;
+}
+.section__name-h1::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 100%;
+  background: orange;
+  background: linear-gradient(90deg, rgba(21, 19, 20, 0) 0%, #151314 11%);
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  z-index: 2;
+  animation: slideRight 5s ease both;
 }
 @keyframes slideRight {
   from {
@@ -350,6 +362,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   font-size: 5em;
   font-weight: 600;
   transform: translateX(20%);
+  overflow: hidden;
 }
 .section__name-h2::before {
   content: " ";
@@ -360,7 +373,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   position: absolute;
   bottom: 0;
   right: 0;
-  animation: slideLeft 4s ease both;
+  animation: slideLeft 5s ease both;
 }
 @keyframes slideLeft {
   from {
@@ -487,17 +500,17 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   z-index: 2;
 }
 .section__about-img {
-  opacity: 0.6;
+  opacity: 0.5;
   border-radius: 1rem;
   grid-column: 1/3;
-  grid-row: 1/4;
+  grid-row: 1/6;
 }
 .section__about-txt-about {
   line-height: 2rem;
   font-size: 1.5em;
   transition: all 0.5s ease;
   grid-column: 3/6;
-  grid-row: 1/1;
+  grid-row: 1/2;
 }
 .section__about-txt-about:hover {
   color: var(--color-hover);
@@ -559,20 +572,20 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   align-items: flex-start;
 }
 .section__contactos-txt {
-  width: 50%;
   font-size: 1.2em;
   margin: 0 0 2rem 0;
 }
 .section__contactos-rrss {
-  width: 25%;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .section__contactos-svg {
   width: 2rem;
   height: 2rem;
+  margin: 0 2rem 0 0;
   transition: all 0.5s ease;
 }
 .section__contactos-svg:hover {
@@ -669,8 +682,25 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
 
   .section__about-wrapper-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
+  }
+
+  .section__about-img {
+    grid-column: 2/6;
+  }
+
+  .section__about-txt-about {
+    grid-column: 2/6;
+    grid-row: 4/6;
+  }
+
+  .section__about-h4 {
+    grid-column: 2/6;
+  }
+
+  .section__about-column-data {
+    grid-column: 2/4;
   }
 }
 @media screen and (max-width: 850px) {
