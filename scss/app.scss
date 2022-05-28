@@ -210,7 +210,7 @@ body{
         width: 100%;
         height: 100%;
         background:red;
-        background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 100%);
+        background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,.95) 100%);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -314,7 +314,7 @@ body{
     overflow: hidden;
 
     &:hover .section__projects-p {
-      animation: goOut 1.5s ease 1 both;
+      animation: goOut .7s ease 1 both; 
     }
   }
 
@@ -322,19 +322,18 @@ body{
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &-overlay {
     width: 100%;
     height: 100%;
-    // background-color: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     );
-    opacity: 0.6;
+    opacity: 0.4;
     position: absolute;
     top: 0;
     left: 0;
@@ -424,15 +423,19 @@ body{
     margin: 0 3% 0 0;
   }
 
-  &-txt-about{
-    // background-color: yellow;
-    line-height: 2rem;
+  &-p-name{
     font-size: 1.5em;
     transition: all 0.5s ease;
+    margin: 0 0 .5rem 0;
+  }
+
+  &-txt-about{
+    font-size: 1.1em;
+    line-height: 1.4;
 
     &:hover {
       color: var(--color-hover);
-    }
+    } 
   }
 
   &-h4 {
