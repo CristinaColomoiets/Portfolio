@@ -16,6 +16,7 @@ body{
 }
 
 .header{
+  
   &__container{
     width: 98%;
     margin: auto;
@@ -27,6 +28,7 @@ body{
     align-items: center;
 
     position: relative;
+    overflow: hidden;
   }
 
   &__svg-logo{
@@ -71,6 +73,15 @@ body{
   &__nav-menu{
     width: 80%;
     font-size: 1.3em;
+    //animation: slideRight 3s ease  1 5s forwards;
+  }
+  @keyframes slideRight{
+    from{
+      transform: translateX(150%);
+    }
+    to{
+      transform: translateX(0%);
+    }
   }
 
   &__nav-menu.activo{
@@ -129,32 +140,17 @@ body{
   }
 }
 
-/* 
-¿Porqué me salta en una medida? margin: 15% 0 0 0
-Cuando alineamos tenemos 2 formas de hacerlo:
-    - Usando min-height y flex
-    - Usando padding 
-    - Usando padding + flex (opcional)
-
-Cuando tenemos un título, recuerda en el reset hay una línea line-height:1.4em;
-El Before es 100% visual, es decir que no afecta a la estructura de la sección.
-Habrá que tocar el height y el top para que "visualmente" se adapte a la contenedora.
-
-El texto de presentación debe de ser absolute ya que lo queremos en el borde inferior derecho de la sección. 
-*/
-
-
 .section__name{
-    width: 100%;
-    min-height: 90vh;
-    //background-color: rgb(178, 248, 248);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  min-height: 90vh;
+  //background-color: rgb(178, 248, 248);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 
-    &::before{
+  &::before{
         content: "";
         display: block;
         width: 100%;
@@ -166,111 +162,128 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
         top: 8%;
         left: 0;
         transform: skew(0, 4deg);
-    }
+  }
 
-    &-box-name{
+  &-box-name{
         //background-color: darkorange;
-    }
-    &-h1{
-        font-size: 6em;
-        font-weight: 600;
-        //background-color: darkorchid;
-        transform: translateX(-25%);
+  }
+  &-h1{
+    font-size: 6em;
+    font-weight: 600;
+    //background-color: darkorchid;
+    transform: translateX(-25%);
+    position: relative;
+    overflow: hidden;
 
-        // &::before{
-        //     content: "hola soy cortinilla";
-        //     display: block;
-        //     width: 100%;
-        //     height: 6rem;
-        //     color: rgba(238, 130, 238, 0.575);
-        //     position: relative;
-        //     bottom: 0;
-        //     left: 0;
-        // }
-    }
-    &-h2{
+      // &::before{
+      //   content: '';
+      //   display: block;
+      //   width: 100%;
+      //   height: 100%;
+      //   background: rgb(21,19,20);
+      //   background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 100%);
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   z-index: 2;
+      // }
+      // &::after{
+      //   content: '';
+      //   display: block;
+      //   width: 200%;
+      //   height: 100%;
+      //   background: rgb(21,19,20);
+      //   background-color: orange;
+      //   background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 11%);
+      //   position: absolute;
+      //   bottom: 0;
+      //   right: 0;
+      //   z-index: 3;
+      //   animation: slideRight 14s ease both;
+
+      // }
+
+
+      &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:red;
+        background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 100%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+      }
+      &::after{
+        content: '';
+        display: block;
+        width: 120%;
+        height: 100%;
+        background:orange;
+        background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 11%);
+        position: absolute;
+        bottom: 0;
+        left:-20%;
+        z-index: 2;
+        animation: slideRight 5s ease both;
+      }
+     
+
+      @keyframes slideRight{
+        from{
+          transform: translateX(0%);
+        }
+        to{
+          transform: translateX(100%);
+        }
+      }
+  }
+  &-h2{
         font-size: 5em;
         font-weight: 600;
         //background-color: darkseagreen;
         transform: translateX(20%);
-    }
-    &-box-text{
-        width: 90%;
-        max-width: 30rem;
-        font-size: 1.2em;
-        //background-color: violet;
-        position: absolute;
-        bottom: 3%;
-        right: 3%;
+        overflow: hidden;
 
-        &:hover{
-            color: var(--color-hover);
+        &::before{
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: rgb(21,19,20);
+          position: absolute;
+          bottom: 0;
+          right: 0;
+
+          animation: slideLeft 5s ease both;
+        }
+
+        @keyframes slideLeft{
+          from{
+            transform: translateX(0%);
+          }
+          to{
+            transform: translateX(-100%);
+          }
         }
     }
+
+  &-box-text{
+      width: 90%;
+      max-width: 30rem;
+      font-size: 1.2em;
+      //background-color: violet;
+      position: absolute;
+      bottom: 3%;
+      right: 3%;
+
+      &:hover{
+          color: var(--color-hover);
+      }
+  }
 }
-
-/* .section__name{
-    width:100%;
-    // background-color: rgba(255, 0, 0, 0.162);
-    min-height: 80vh;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    
-
-    &::before{
-        content: '';
-        display: block;
-        width:100%;
-        height:88%;
-        background-color: rgba(0, 255, 255, 0.382);
-        background-color: black;
-        position: absolute;
-        top:6%;
-        left:0;
-
-        border-top:1px solid gold;
-        border-bottom:1px solid gold;
-        transform: skewY(4deg);
-    }
-
-    &-box-name{
-    //    background-color: lime;
-       line-height: 4em;
-    }
-
-    &-h1{
-        // background-color: crimson;
-        font-size: 3em;
-        transform: translateX(-25%);
-    }
-    &-h2{
-        // background-color: crimson;
-        font-size: 4em;
-        transform: translateX(25%);
-    }
-
-    &-box-text{
-        max-width: 40rem;
-        width:90%;
-        // background-color: cadetblue;
-        position: absolute;
-        bottom:15%;
-        right: 5%;
-    
-    }
-
-    &-p{
-       
-        &:hover{
-           
-        }
-    }
-} */
 
 .section__projects{
   padding-bottom: 10rem;
@@ -366,7 +379,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   position: relative;
   padding: 5rem 0;
 
-  &::before {
+  &::before{
     content: "";
     display: block;
     width: 100%;
@@ -381,7 +394,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     pointer-events: none;
   }
 
-  &-h3 {
+  &-h3{
     width: 90%;
     max-width: 1200px;
     margin: auto;
@@ -392,34 +405,30 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     //background-color: green;
   }
 
-  &-wrapper-grid {
+  &-wrapper-grid{
     width: 90%;
-
+    max-width: 1200px;
     margin: 5rem auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     position: relative;
     z-index: 2;
   }
 
-  &-img {
-    opacity: 0.6;
+  &-img{
+    opacity: 0.5;
     border-radius: 1rem;
-
-    grid-column: 1/3;
-    grid-row: 1/4;
+    width: 40%;
+    max-width: 1200px;
+    margin: 0 3% 0 0;
   }
 
-  &-txt-about {
+  &-txt-about{
     // background-color: yellow;
     line-height: 2rem;
     font-size: 1.5em;
-    //background-color: rgb(22, 123, 118);
     transition: all 0.5s ease;
-
-    grid-column: 3/6;
-    grid-row: 1/1;
 
     &:hover {
       color: var(--color-hover);
@@ -430,8 +439,8 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     text-align: start;
     font-size: 1.5em;
     font-weight: 600;
+    margin: 7% 0;
     //background-color: rgb(218, 141, 0);
-    grid-column: 3/6;
 
     &::after {
       content: "";
@@ -441,21 +450,15 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     }
   }
 
-  &-column-data {
-    //background-color: rgb(33, 112, 4);
-    grid-column: 3/4;
+  &-year{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0 4% 0;
   }
 
-  &-column-name {
-    //background-color: crimson;
-    grid-column: 4/6;
-  }
-
-  &-data {
+  &-data{
     font-size: 1.4em;
     font-weight: 600;
-    margin: 0 0 2rem 0;
-
     transition: all 0.5s ease;
 
     &:hover {
@@ -463,10 +466,8 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
     }
   }
 
-  &-p {
-    font-size: 1.1em;
-    margin: 0 0 2rem 0;
-
+  &-p{
+    font-size: 1.2em;
     transition: all 0.5s ease;
 
     &:hover {
@@ -500,25 +501,24 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   }
 
   &-txt {
-    width: 50%;
     //background-color: chartreuse;
     font-size: 1.2em;
     margin: 0 0 2rem 0;
   }
 
   &-rrss {
-    width: 25%;
+    width: 100%;
     //background-color: crimson;
-
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
   &-svg {
     width: 2rem;
     height: 2rem;
+    margin: 0 2rem 0 0;
     transition: all 0.5s ease;
 
     &:hover {
@@ -567,7 +567,7 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
 @media screen and(max-width:1300px){
   .section__name-box-name{
         text-align: center;
-    }
+  }
   .section__name-h1{
     transition: all .9s ease;
     transform: translateX(0%);
@@ -575,6 +575,16 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
   .section__name-h2{
     transition: all .9s ease;
     transform: translateX(0%);
+  }
+
+  .section__projects-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .section__projects-box-foto{
+    width: 60%;
   }
 }
 
@@ -603,12 +613,15 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
 }
 
 @media screen and (max-width:1000px){
-    .section__name-h1{
+  .section__name-h1{
         font-size: 5em;
     }
-    .section__name-h2{
+  .section__name-h2{
         font-size: 4em;
     }
+
+
+
 }
 
 @media screen and (max-width:850px){
@@ -635,7 +648,6 @@ El texto de presentación debe de ser absolute ya que lo queremos en el borde in
         padding: 0.3rem 1.1rem;
       }
 }
-
 
 @media screen and (max-width:660px){
     .header__container{
