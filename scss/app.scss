@@ -13,7 +13,6 @@ body{
   &__container{
     width: 98%;
     margin: auto;
-    //background-color: rgb(206, 56, 1);
 
     display: flex;
     flex-flow: row nowrap;
@@ -21,7 +20,7 @@ body{
     align-items: center;
 
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__svg-logo{
@@ -42,52 +41,29 @@ body{
     }
   }
 
-  &__box-svg-menu{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-text);
-
-    display: none;
-  }
-
   &__svg-menu{
-    width: 3rem;
-    height: 3rem;
-    color: var(--color-primary);
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--color-text);
+    display: none;
     cursor: pointer;
   }
 
   &__nav-menu{
     width: 80%;
     font-size: 1.3em;
-    //animation: slideRight 3s ease  1 5s forwards;
+    //animation: slideRight 3s ease  1 5s;
   }
+
   @keyframes slideRight{
     from{
-      transform: translateX(150%);
+      transform: translateX(-200%);
     }
     to{
       transform: translateX(0%);
     }
   }
 
-  &__nav-menu.activo{
-    width: 70%;
-    background-color: mediumslateblue;
-    border-radius: 50% 50%;
-    font-size: 1.1em;
-    z-index: 1;
-
-    position: absolute;
-    top: -88%;
-    right: -9%;
-  }
 
   &__ul{
     display: flex;
@@ -96,27 +72,15 @@ body{
     align-items: center;
   }
 
-  &__ul.activo{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10rem 7rem;
-  }
+
 
   &__li{
-    // background-color: red;
     margin: 0 0 0 10%;
     transition: all 0.5s ease;
 
     :hover {
       color: var(--color-hover);
     }
-  }
-
-  &__li.activo{
-      background-color: rgb(210, 0, 0);
-      margin-bottom: 1rem;
   }
 
   &__a-nav{
@@ -131,17 +95,31 @@ body{
       border: 1px solid var(--color-hover);
     }
   }
+  
+  &__close-menu {
+    display: flex;
+    justify-content: end;
+    color: var(--color-primary);
+    cursor: pointer;
+
+    .close-button {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+
 }
 
 .section__name{
   width: 100%;
   min-height: 90vh;
-  display: flex;
+  padding-bottom: 7rem;display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
-
+  
   &::before{
   content: "";
   display: block;
@@ -239,18 +217,17 @@ body{
   }
 
   &-box-text{
-      width: 90%;
-      max-width: 30rem;
-      font-size: 1.2em;
-      //background-color: violet;
-      position: absolute;
-      bottom: 3%;
-      right: 3%;
-      transition: all .9s ease;
+  width: 90%;
+  max-width: 30rem;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  transition: all .9s ease;
 
-      &:hover{
-          color: var(--color-hover);
-      }
+  &:hover{
+      color: var(--color-hover);
+  }
   }
 }
 
@@ -301,7 +278,7 @@ body{
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     );
-    opacity: 0.5;
+    opacity: 0.8;
     position: absolute;
     top: 0;
     left: 0;
@@ -544,6 +521,9 @@ body{
     transition: all .9s ease;
     transform: translateX(0%);
   }
+  .section__name-box-text{
+    bottom: 5%;
+  }
 
   .section__projects-wrapper{
     display: flex;
@@ -602,7 +582,7 @@ body{
     width: 100%;
   }
   .section__about-box-text{
-    margin: 3% 0 0 0;
+    margin: 7% 0 0 0;
   }
 }
 
@@ -614,8 +594,7 @@ body{
       font-size: 3em;
   }
   .section__name-box-text{
-      font-size: .9em;
-      bottom: 5%;
+    font-size: .9em;
   }
 
   .header__svg-logo{
@@ -643,13 +622,48 @@ body{
   .header__nav-menu{
       display: none;
   }
-  .header__box-svg-menu{
-      display: flex;
-      position: absolute;
-      top: -17%;
-      right: -4%;
+  .header__svg-menu{
+    display: block;
   }
 
+  .header__nav-menu.active {
+    width: 32%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index:2;
+    background-color: var(--color-text);
+    color: var(--color-primary);
+    display: block;
+    
+    .header__ul{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+    
+    .header__li{
+      // background-color: rgb(1, 39, 53);
+      a{
+        margin: 2rem 0;
+        border: 1px solid var(--color-primary);
+        border-radius: .5rem;
+        color: var(--color-primary);
+      }
+    }
+  }
+
+
+  .section__name{
+    width: 100%;
+    min-height: 80vh;
+  
+    &::before{
+    height: 80%;
+    }
+  }
   .section__name-h1{
     font-size: 3em;
   }
@@ -659,7 +673,7 @@ body{
   .section__name-box-text{
     max-width: 20rem;
     font-size: .8em;
-    bottom: 7%;
+    bottom: 15%;
   }
 
   .section__projects{
@@ -694,6 +708,14 @@ body{
 
 @media screen and(max-width:500px){
   .section__name-h1{
-    font-size: 2em;
+    font-size: 2.5em;
+    margin: 0 0 4% 0;
+  }
+}
+
+@media screen and(max-width:400px){
+  .section__name-h1{
+    font-size: 2.2em;
+    margin: 0 0 4% 0;
   }
 }
