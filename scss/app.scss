@@ -4,16 +4,10 @@ body{
   // background-color: white; /*Temporal*/
   color: var(--color-text);
 }
-
 .span{
   color: var(--color-hover);
 }
 
-.wrapper{
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
 
 .header{
   
@@ -278,6 +272,7 @@ body{
       position: absolute;
       bottom: 3%;
       right: 3%;
+      transition: all .9s ease;
 
       &:hover{
           color: var(--color-hover);
@@ -287,45 +282,44 @@ body{
 
 .section__projects{
   padding-bottom: 10rem;
-  //background-color: cadetblue;
 
-  &-h3 {
+  &-h3{
     width: 90%;
     max-width: 1200px;
     margin: auto;
     font-size: 2em;
     font-weight: 600;
-    //background-color: red;
   }
 
-  &-wrapper {
-    width: 100%;
+  &-wrapper{
+    width: 90%;
+    max-width: 1200px;
     margin: 5rem auto;
-    //background-color: orange;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
   }
 
-  &-box-foto {
+  &-box-foto{
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
 
     &:hover .section__projects-p {
       animation: goOut .7s ease 1 both; 
+
     }
   }
 
-  &-item {
+  &-item{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
   }
 
-  &-overlay {
+  &-overlay{
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -333,42 +327,38 @@ body{
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     );
-    opacity: 0.4;
+    opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
     transition: all 1s ease;
 
-    &:hover {
-      background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0) 100%
-      );
-      opacity: 0.8;
+    &:hover{
+      opacity: 0.2;
     }
   }
 
-  &-p {
+  &-p{
+    width: 100%;
     color: var(--color-text);
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: 600;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0;
     background-color: var(--color-primary);
-    border: 1px solid var(--color-btn);
-    border-radius: 0.5rem;
+   
+    text-align: center;
     opacity: 0;
     position: absolute;
   }
 
-  @keyframes goOut {
+  @keyframes goOut{
     from {
       opacity: 0;
       transform: translateY(200%);
     }
     to {
-      opacity: 0.7;
+      opacity: 0.8;
       transform: translateY(0%);
     }
   }
@@ -627,6 +617,18 @@ body{
 
 }
 
+@media screen and(max-width:900px){
+  .section__about-wrapper-grid{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .section__about-img{
+    width: 100%;
+  }
+}
+
 @media screen and (max-width:850px){
     .section__name-h1{
         font-size: 4em;
@@ -682,5 +684,13 @@ body{
         max-width: 20rem;
         font-size: .8em;
         bottom: 7%;
+    }
+
+    .section__about-data{
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    .section__about-p{
+      font-size: 1em;
     }
 }
