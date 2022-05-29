@@ -1,7 +1,6 @@
 @import "_reset";
 
 body{
-  // background-color: white; /*Temporal*/
   color: var(--color-text);
 }
 .span{
@@ -256,7 +255,7 @@ body{
 }
 
 .section__projects{
-  padding-bottom: 10rem;
+  padding: 5rem 0 10rem 0;
 
   &-h3{
     width: 90%;
@@ -445,7 +444,7 @@ body{
 }
 
 .section__contactos{
-  padding-bottom: 4rem 0 0 0;
+  padding: 4rem 0 0 0;
 
   &-h3 {
     width: 90%;
@@ -553,7 +552,7 @@ body{
     align-items: center;
   }
   .section__projects-box-foto{
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -589,6 +588,10 @@ body{
 }
 
 @media screen and(max-width:900px){
+  .section__projects-box-foto{
+    width: 90%;
+  }
+
   .section__about-wrapper-grid{
     display: flex;
     flex-flow: column nowrap;
@@ -657,6 +660,10 @@ body{
     max-width: 20rem;
     font-size: .8em;
     bottom: 7%;
+  }
+
+  .section__projects{
+    padding-bottom: 5rem;
   }
 
   .section__about-data{
