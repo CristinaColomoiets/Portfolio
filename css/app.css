@@ -879,6 +879,10 @@ body {
   .section__about-img {
     width: 100%;
   }
+
+  .section__about-box-text {
+    margin: 3% 0 0 0;
+  }
 }
 @media screen and (max-width: 850px) {
   .section__name-h1 {
@@ -959,5 +963,29 @@ body {
 
   .section__about-p {
     font-size: 1em;
+  }
+
+  .section__contactos-txt {
+    font-size: 1em;
+  }
+
+  .section__contactos-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 2rem 0 0;
+  }
+
+  .section__contactos-p {
+    font-size: 0.7em;
+  }
+
+  .a__arrow-arrow-up {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .section__name-h1 {
+    font-size: 2em;
   }
 }
