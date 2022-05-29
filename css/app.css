@@ -384,7 +384,6 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: red;
   background: -webkit-gradient(linear, left top, right top, from(rgba(21, 19, 20, 0)), to(rgba(21, 19, 20, 0.95)));
   background: linear-gradient(90deg, rgba(21, 19, 20, 0) 0%, rgba(21, 19, 20, 0.95) 100%);
   position: absolute;
@@ -397,15 +396,14 @@ body {
   display: block;
   width: 120%;
   height: 100%;
-  background: orange;
   background: -webkit-gradient(linear, left top, right top, from(rgba(21, 19, 20, 0)), color-stop(11%, rgb(21, 19, 20)));
   background: linear-gradient(90deg, rgba(21, 19, 20, 0) 0%, rgb(21, 19, 20) 11%);
   position: absolute;
   bottom: 0;
   left: -20%;
   z-index: 2;
-  -webkit-animation: slideRight 5s ease both;
-          animation: slideRight 5s ease both;
+  -webkit-animation: slideRight 3s ease-out both;
+          animation: slideRight 3s ease-out both;
 }
 @keyframes slideRight {
   from {
@@ -420,9 +418,22 @@ body {
 .section__name-h2 {
   font-size: 5em;
   font-weight: 600;
+  color: var(--color-h2);
   -webkit-transform: translateX(20%);
           transform: translateX(20%);
   overflow: hidden;
+}
+.section__name-h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(21, 19, 20, 0)), to(rgba(21, 19, 20, 0.95)));
+  background: linear-gradient(270deg, rgba(21, 19, 20, 0) 0%, rgba(21, 19, 20, 0.95) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 }
 .section__name-h2::before {
   content: " ";
@@ -433,8 +444,8 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-animation: slideLeft 5s ease both;
-          animation: slideLeft 5s ease both;
+  -webkit-animation: slideLeft 3s ease-out both;
+          animation: slideLeft 3s ease-out both;
 }
 @-webkit-keyframes slideLeft {
   from {

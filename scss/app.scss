@@ -137,7 +137,6 @@ body{
 .section__name{
   width: 100%;
   min-height: 90vh;
-  //background-color: rgb(178, 248, 248);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -145,124 +144,100 @@ body{
   position: relative;
 
   &::before{
-        content: "";
-        display: block;
-        width: 100%;
-        height: 90%;
-        background-color: var(--color-bg2);
-        border-top: 1px solid var(--color-line);
-        border-bottom: 1px solid var(--color-line);
-        position: absolute;
-        top: 8%;
-        left: 0;
-        transform: skew(0, 4deg);
+  content: "";
+  display: block;
+  width: 100%;
+  height: 90%;
+  background-color: var(--color-bg2);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  position: absolute;
+  top: 8%;
+  left: 0;
+  transform: skew(0, 4deg);
   }
 
-  &-box-name{
-        //background-color: darkorange;
-  }
   &-h1{
-    font-size: 6em;
-    font-weight: 600;
-    //background-color: darkorchid;
-    transform: translateX(-25%);
-    position: relative;
-    overflow: hidden;
+  font-size: 6em;
+  font-weight: 600;
+  transform: translateX(-25%);
+  position: relative;
+  overflow: hidden;
 
-      // &::before{
-      //   content: '';
-      //   display: block;
-      //   width: 100%;
-      //   height: 100%;
-      //   background: rgb(21,19,20);
-      //   background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 100%);
-      //   position: absolute;
-      //   bottom: 0;
-      //   left: 0;
-      //   z-index: 2;
-      // }
-      // &::after{
-      //   content: '';
-      //   display: block;
-      //   width: 200%;
-      //   height: 100%;
-      //   background: rgb(21,19,20);
-      //   background-color: orange;
-      //   background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 11%);
-      //   position: absolute;
-      //   bottom: 0;
-      //   right: 0;
-      //   z-index: 3;
-      //   animation: slideRight 14s ease both;
-
-      // }
-
-
-      &::before{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background:red;
-        background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,.95) 100%);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-      }
-      &::after{
-        content: '';
-        display: block;
-        width: 120%;
-        height: 100%;
-        background:orange;
-        background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 11%);
-        position: absolute;
-        bottom: 0;
-        left:-20%;
-        z-index: 2;
-        animation: slideRight 5s ease both;
-      }
-     
-
-      @keyframes slideRight{
-        from{
-          transform: translateX(0%);
-        }
-        to{
-          transform: translateX(100%);
-        }
-      }
-  }
-  &-h2{
-        font-size: 5em;
-        font-weight: 600;
-        //background-color: darkseagreen;
-        transform: translateX(20%);
-        overflow: hidden;
-
-        &::before{
-          content: " ";
-          display: block;
-          width: 100%;
-          height: 100%;
-          background: rgb(21,19,20);
-          position: absolute;
-          bottom: 0;
-          right: 0;
-
-          animation: slideLeft 5s ease both;
-        }
-
-        @keyframes slideLeft{
-          from{
-            transform: translateX(0%);
-          }
-          to{
-            transform: translateX(-100%);
-          }
-        }
+    &::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,.95) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
     }
+
+    &::after{
+    content: '';
+    display: block;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(21,19,20,0) 0%, rgba(21,19,20,1) 11%);
+    position: absolute;
+    bottom: 0;
+    left:-20%;
+    z-index: 2;
+    animation: slideRight 3s ease-out both;
+    }
+    @keyframes slideRight{
+      from{
+        transform: translateX(0%);
+      }
+      to{
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &-h2{
+  font-size: 5em;
+  font-weight: 600;
+  color: var(--color-h2);
+  transform: translateX(20%);
+  overflow: hidden;
+
+  &::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(21,19,20,0) 0%, rgba(21,19,20,.95) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    }
+
+  &::before{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(21,19,20);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    animation: slideLeft 3s ease-out both;
+  }
+  @keyframes slideLeft{
+      from{
+        transform: translateX(0%);
+      }
+      to{
+        transform: translateX(-100%);
+      }
+    }
+  }
 
   &-box-text{
       width: 90%;
