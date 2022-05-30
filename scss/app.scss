@@ -52,18 +52,17 @@ body{
   &__nav-menu{
     width: 80%;
     font-size: 1.3em;
-    //animation: slideRight 3s ease  1 5s;
+    animation: slideRight 2s ease-out  1 2s both;
   }
 
   @keyframes slideRight{
     from{
-      transform: translateX(-200%);
+      transform: translateX(200%);
     }
     to{
       transform: translateX(0%);
     }
   }
-
 
   &__ul{
     display: flex;
@@ -71,8 +70,6 @@ body{
     justify-content: flex-end;
     align-items: center;
   }
-
-
 
   &__li{
     margin: 0 0 0 10%;
@@ -96,19 +93,19 @@ body{
     }
   }
   
-  &__close-menu {
+  &__close-menu{
     display: flex;
-    justify-content: end;
-    color: var(--color-primary);
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: var(--color-text);
     cursor: pointer;
-
-    .close-button {
-      width: 3rem;
-      height: 3rem;
-    }
+    display: none;
   }
 
-
+  &__close-button{
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .section__name{
@@ -163,9 +160,9 @@ body{
     bottom: 0;
     left:-20%;
     z-index: 2;
-    animation: slideRight 3s ease-out both;
+    animation: slideRight-name 3s ease-out both;
     }
-    @keyframes slideRight{
+    @keyframes slideRight-name{
       from{
         transform: translateX(0%);
       }
@@ -207,12 +204,12 @@ body{
     animation: slideLeft 3s ease-out both;
   }
   @keyframes slideLeft{
-      from{
-        transform: translateX(0%);
-      }
-      to{
-        transform: translateX(-100%);
-      }
+    from{
+      transform: translateX(0%);
+    }
+    to{
+      transform: translateX(-100%);
+    }
     }
   }
 
@@ -225,9 +222,9 @@ body{
   right: 3%;
   transition: all .9s ease;
 
-  &:hover{
+    &:hover{
       color: var(--color-hover);
-  }
+    }
   }
 }
 
@@ -612,12 +609,11 @@ body{
 
 @media screen and (max-width:660px){
   .header__container{
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: center;
-
-      position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
   }
   .header__nav-menu{
       display: none;
@@ -625,34 +621,48 @@ body{
   .header__svg-menu{
     display: block;
   }
-
-  .header__nav-menu.active {
-    width: 32%;
+  .header__nav-menu.active{
+    width: 100%;
+    height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
     z-index:2;
-    background-color: var(--color-text);
+    background-color: var(--color-primary);
     color: var(--color-primary);
     display: block;
+
+    animation: slideMenu 1s ease;
+    transition: all 1s ease;
+
+    @keyframes slideMenu{
+      from{
+        transform: translateX(150%);
+      }
+      to{
+        transform: translateX(0%);
+      }
+    }
     
     .header__ul{
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 2rem;
+      //padding: 2rem;
     }
     
-    .header__li{
-      // background-color: rgb(1, 39, 53);
-      a{
-        margin: 2rem 0;
-        border: 1px solid var(--color-primary);
-        border-radius: .5rem;
-        color: var(--color-primary);
-      }
+    .header__a-nav{
+      margin: 2rem 0;
+      border: 1px solid var(--color-text);
+      border-radius: .5rem;
+      color: var(--color-text);
     }
+
+    .header__close-menu{
+      display: flex;
+    }
+    
   }
 
 
@@ -677,7 +687,7 @@ body{
   }
 
   .section__projects{
-    padding-bottom: 5rem;
+    padding: 0 0 3rem 0;
   }
 
   .section__about-data{
