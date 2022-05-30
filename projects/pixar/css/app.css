@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;  /* en el caso de ancla(enlace)*/
+}
+body{
+    font-size: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+li{
+    list-style-type: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+p a{
+    display: inline;
+}
+img , picture{
+    display: block;
+    max-width: 100%;                  
+    width: 100%;       
+    object-fit: scale-down;               
+}
+
+
+
+
+                                     /* MI CODICO */
+
+
+
+
+
+.header{
+  width: 100%;
+  padding: 3rem 0;
+  /*background-color: grey;*/
+      
+}
+.header .wrapper{
+    width: 80%;
+    /*background-color: orange;*/
+    margin: auto;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .h1{
+    /*background-color: hotpink;*/
+}
+.header .a{}
+.header .img{}
+.header .nav{}
+.header .ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+.header li{
+    /*background-color: rgb(207, 161, 240);*/
+    margin: 0 2rem;
+}
+.header .svg{
+    width: 3rem;
+    color: red;
+    display: none;
+}
+
+
+
+.main{}
+
+.pelicula{
+    width:100%;
+    min-height: 80vh;
+    background-image: url("../assets/peluche.jpg");
+    background-color: palevioletred;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.pelicula .h2{
+   width:30%;
+   /*background-color: aqua;*/
+   margin: 0 4rem  0;
+}
+
+
+
+.columnas{
+    width: 80%;
+   /*background-color: royalblue;*/
+    margin: 10rem auto 0;
+
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.columnas .columna{
+    /*background-color: rgb(14, 197, 197);*/
+    margin: 0 2rem;
+}
+.columnas .h3{
+    margin-top: 2rem;
+}
+
+
+
+@media screen and (max-width: 1400px){
+    .header .nav{
+        display: none;
+    }
+
+    .header .svg{
+        display: block;
+        flex-flow: row;
+        justify-content: flex-end;
+    }
+}
+@media screen and (max-width: 1300px){
+    .columnas{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .columnas .columna{
+        margin-bottom: 5rem;
+    }
+}
+
+
+
+.footer{
+    width: 100%;
+    background-color: grey;
+    padding: 25rem 0;
+}
+.footer .rrss{
+    width: 50%;
+    background-color: lightgray;
+    margin: auto;
+}
+
+.footer .rrss .svg{
+    width: 1.5rem;
+    background-color: rgb(178, 240, 178);
+    margin: 0 0.5rem 0;
+}
+.footer .information{
+    width: 30%;
+    background-color: rgb(251, 191, 191);
+    margin:  2rem auto;
+}
+
+.footer .ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer .information .li .a{
+    /* border-bottom: 1px solid black; */
+    text-decoration: underline;
+}
+

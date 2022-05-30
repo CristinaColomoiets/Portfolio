@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100;200;300;400;500;600;700;800&family=Flow+Circular&family=Hurricane&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,600;0,700;1,100;1,500;1,600;1,700&family=Playfair+Display:ital@1&family=Quicksand:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&family=Tapestry&display=swap" rel="stylesheet">
@@ -26,22 +28,25 @@
                     </svg>
                 </a>
 
-                <div class="header__box-svg-menu">
-                    <svg class="header__svg-menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                    </svg>
-                </div>
+                <svg class="header__svg-menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
     
-                <nav class="header__nav-menu activo">
+                <nav class="header__nav-menu">
+                    <div class="header__close-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="close-button" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </div>
                     <ul class="header__ul">
                         <li class="header__li">
-                            <a href="#" class="header__a-nav" title="Proyectos">Proyectos</a>
+                            <a href="#my-projects" class="header__a-nav" title="Proyectos">Proyectos</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__a-nav" title="Sobre mí">Sobre mí</a>
+                            <a href="#about-me" class="header__a-nav" title="Sobre mí">Sobre mí</a>
                         </li>
                         <li class="header__li">
-                            <a href="#" class="header__a-nav" title="Contactos">Contactos</a>
+                            <a href="#contacts" class="header__a-nav" title="Contactos">Contactos</a>
                         </li>
                     </ul>
                 </nav>
@@ -51,147 +56,128 @@
         <section class="section__name">
             <div class="section__name-box-name">
                 <h1 class="section__name-h1">Cristina Colomoiets</h1>
-                <div class="section__name-curtain"></div>
-                <h2 class="section__name-h2">Front-end Developer</h2>
-                <div class="section__name-curtain"></div>
+                <h2 class="section__name-h2">Frontend Developer</h2>
             </div>
     
             <div class="section__name-box-text">
-                <p class="section__name-p">"El <span class="span">Deseño Web</span> y la <span class="span">Programacion</span> en general es el arte moderno opino yo. Tú tienes tu material para trabajar y las herramintas, solamente que no requiere de un gran talento, sino de un esfuerzo y paciencia"
+                <p class="section__name-p">"En mi opinión, el <span class="span">Deseño Web</span> y la <span class="span">Programacion</span> en general es el arte moderno. Tú tienes el material para trabajar y las herramientas, lo único que no requiere de un gran talento, sino de esfuerzo y paciencia."
                 </p>
             </div>
         </section>
     
-        <section class="section__projects">
-            <div class="section__projects-title-wrapper">
-                <h3 class="section__projects-h3">Mis proyectos</h3>
-            </div>
+        <section class="section__projects" id="my-projects">
+            <h3 class="section__projects-h3">Mis proyectos</h3>
 
-            <div class="section__projects-wrapper">
+            <div class=" wrapper section__projects-wrapper">
     
                 <div class="section__projects-box-foto">
-                    <a href="" class="section__projects-item" title="Abrir el proyecto">
+                    <a href="./projects/stockholm/" class="section__projects-item" title="Abrir el proyecto" target="_blank">
                         <img src="assets/stockholm.jpg" alt="Imagen" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
+                        <p class="section__projects-p">Stockholm Firma</p>
+                        <div class="section__projects-overlay"></div>
                     </a>
                 </div>
 
                 <div class="section__projects-box-foto">
-                    <a href="#" class="section__projects-item" title="Abrir el proyecto">
+                    <a href="./projects/ark-shelter/" class="section__projects-item" title="Abrir el proyecto" target="_blank">
                         <img src="assets/ark-shelter.jpg" alt="Imagen" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
+                        <p class="section__projects-p">Ark-Shelter</p>
+                        <div class="section__projects-overlay"></div>
                     </a>
                 </div>
 
                 <div class="section__projects-box-foto">
-                    <a href="#" class="section__projects-item" title="Abrir el proyecto">
+                    <a href="./projects/carlash/" class="section__projects-item" title="Abrir el proyecto" target="_blank">
                         <img src="assets/carlash.jpg" alt="Imagen" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
+                        <p class="section__projects-p">Carlash</p>
+                        <div class="section__projects-overlay"></div>
                     </a>
                 </div>
 
                 <div class="section__projects-box-foto">
-                    <a href="#" class="section__projects-item" title="Abrir el proyecto">
-                        <img src="assets/boxfish.jpg" alt="" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
+                    <a href="./projects/boxfish/" class="section__projects-item" title="Abrir el proyecto" target="_blank">
+                        <img src="assets/boxfish.jpg" alt="Imagen" class="section__projects-img">
+                        <p class="section__projects-p">BoxFish</p>
+                        <div class="section__projects-overlay"></div>
                     </a>
                 </div>
 
                 <div class="section__projects-box-foto">
-                    <a href="#" class="section__projects-item" title="Abrir el proyecto">
-                        <img src="assets/pixar.jpg" alt="" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
+                    <a href="./projects/pixar/" class="section__projects-item" title="Abrir el proyecto" target="_blank">
+                        <img src="assets/pixar.jpg" alt="Imagen" class="section__projects-img">
+                        <p class="section__projects-p">Pixar</p>
+                        <div class="section__projects-overlay"></div>
                     </a>
                 </div>
 
                 <div class="section__projects-box-foto">
-                    <a href="#" class="section__projects-item" title="Abrir el proyecto">
-                        <img src="assets/sony.jpg" alt="" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="section__projects-box-foto boxSeven">
-                    <a href="#" class="section__projects-item" title="Abrir el proyecto">
-                        <img src="assets/stockholm2.jpg" alt="" class="section__projects-img">
-                        <div class="section__projects-overlay">
-                            <p class="section__projects-p">Stockholm Firma</p>
-                        </div>
+                    <a href="./projects/sony/" class="section__projects-item" title="Abrir el proyecto" target="_blank">
+                        <img src="assets/sony.jpg" alt="Imagen" class="section__projects-img">
+                        <p class="section__projects-p">Sony</p>
+                        <div class="section__projects-overlay"></div>
                     </a>
                 </div>
             </div>
         </section>
     
-        <section class="section__about">
-            <div class="section__about-title-wrapper">
-                <h3 class="section__about-h3">Sobre mí</h3>
-            </div>
+        <section class="section__about" id="about-me">
+            <h3 class="section__about-h3">Sobre mí</h3>
             
-            <div class="section__about-wrapper-grid">
+            <div class=" wrapper section__about-wrapper-grid">
                 <img src="./assets/foto-bg-web.jpg" alt="Image" class="section__about-img">
-                <p class="section__about-txt-about"><span class="span">¡Hola, me llamo Cristina!</span> Soy una persona amigable y comunicativa. Activa, responsable y muy organizada, 
-                    me gusta el orden y opino que esto mejora mucho la productividad. Suelo ser bastante planificadora, pero también soy una persona muy flexible.
-                    Me interesa mucho la psicología humana, los idiomas y disfruto mucho dibujando. 
-                    Para encontrarme cómo <span class="span">Desarrolladora Web</span> yo tenía que pasar un largo camino a través de China, literalmente)))
-                    Y me gusta mucho el camino que escogí.
-                </p>
-    
-                <h4 class="section__about-h4">Mis estudios</h4>
-        
-                <div class="section__about-column-data">
-                    <div class="section__about-data">
-                        2006
+                <div class="section__about-box-text">
+                    <p class="section__about-p-name"><span class="span">¡Hola, me llamo Cristina!</span> 
+                    </p>
+                    <p class="section__about-txt-about">Soy una persona amigable y comunicativa. Activa, responsable y muy organizada, 
+                        me gusta el orden y opino que esto mejora mucho la productividad. Suelo ser bastante planificadora, pero también soy una persona muy flexible.
+                        Me interesa mucho la psicología humana, los idiomas y disfruto mucho dibujando. 
+                        Para encontrarme cómo <span class="span">Desarrolladora Web</span> yo tenía que pasar un largo camino a través de China, literalmente)))
+                        Y me gusta mucho el camino que escogí.</p> 
+
+                    <h4 class="section__about-h4">Mis estudios</h4>
+                    
+                    <div class="section__about-box-studies">
+                        <div class="section__about-year">
+                            <div class="section__about-data">
+                                2006
+                            </div>
+                            <p class="section__about-p">Bachillerato</p>
+                        </div>
+                        <div class="section__about-year">
+                            <div class="section__about-data">
+                                2010
+                            </div>
+                            <p class="section__about-p">Carrera Universitaria de Marketing</p>
+                        </div>
+                        <div class="section__about-year">
+                            <div class="section__about-data">
+                                2017
+                            </div>
+                            <p class="section__about-p">Curso de Diseño grafico</p>
+                        </div>
+                        <div class="section__about-year">
+                            <div class="section__about-data">
+                                2018
+                            </div>
+                            <p class="section__about-p">Curso de HTML & CSS</p>
+                        </div>
+                        <div class="section__about-year">
+                            <div class="section__about-data">
+                                2022
+                            </div>
+                            <p class="section__about-p">Master en Trazos de Desarollo Front-End</p>
+                        </div>
                     </div>
-                    <div class="section__about-data">
-                        2010
-                    </div>
-                    <div class="section__about-data">
-                        2017
-                    </div>
-                    <div class="section__about-data">
-                        2018
-                    </div>
-                    <div class="section__about-data">
-                        2022
-                    </div>
-                </div>
-        
-                <div class="section__about-column-name">
-                    <p class="section__about-p">Bachillerato</p>
-                    <p class="section__about-p">Carrera Universitaria de Marketing</p>
-                    <p class="section__about-p">Curso de Diseño grafico</p>
-                    <p class="section__about-p">Curso de HTML & CSS</p>
-                    <p class="section__about-p">Master en Trazos de Desarollo Front-End</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <a href="#" class="a__arrow" title="Flecha para subir arriba">
-        <svg class="a__arrow-arrow-up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
-            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z"/>
-        </svg>
-    </a>
-
-    <footer class="section__contactos">
-        <div class="section__contactos-title-wrapper">
-            <h3 class="section__contactos-h3">Contactos</h3>
-        </div>
+    <footer class="section__contactos" id="contacts">
+        <h3 class="section__contactos-h3">Contactos</h3>
         
-        <div class="section__contactos-wrapper">
-            <div class="section__contactos-txt">Contactame por vía mail, LinkedIn, u otras redes sociales
+        <div class=" wrapper section__contactos-wrapper">
+            <div class="section__contactos-txt">Contáctame por vía mail, LinkedIn, u otras redes sociales
             </div>
 
             <div class="section__contactos-rrss">
@@ -217,7 +203,15 @@
                 </a>
             </div>
         </div>
+
+        <p class="section__contactos-p">Creado en 2022</p>
     </footer>
+
+    <a href="#" class="a__arrow" title="Flecha para subir arriba">
+        <svg class="a__arrow-arrow-up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z"/>
+        </svg>
+    </a>
 
 </body>
 </html>

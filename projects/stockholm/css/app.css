@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;  /* en el caso de ancla(enlace)*/
+
+}
+body{
+    font-size: 100%;
+    font-family: 'Roboto Serif', serif;
+    color: #181818;
+}
+form, input , select, textarea, button{
+    display: block;
+    font-size: inherit;
+    font-family: inherit;
+    background:transparent;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: inherit;
+    font-size: inherit;
+    color: rgb(95, 95, 95);
+}
+li{
+    list-style-type: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+p a{
+    display: inline;
+}
+img , picture{
+    display: block;
+    max-width: 100%;   /* para q no supere el ancho de la caja */
+    width: 100%;      /* para q no crezca mas de su caja*/
+}
+
+/* "Object-fit: scale-down;" - Usamos en el caso si ponemos altura a la caja. Para evitar que la imagen nunca se deforme, 
+da igual q tamaño tiene la caja. */
+
+img{
+object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir background */
+/*object-fit: scale-down;*/    /* se usa mas para imagenes que tienen que cubrir caja y tener su tamaño segun la caja */
+}
+
+
+
+
+                             /************************** Códico *************************/
+
+
+
+.header{
+    width: 100%;
+    /*background-color: grey;*/
+    position: absolute;
+}
+.header .wrapper{
+    width: 60%;
+    /*background-color: rgb(247, 150, 198);*/
+    margin: auto;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .h1{
+    max-width: 10rem;
+    /*background-color: rgb(207, 245, 169);*/
+    
+}
+.header .svg-menu{
+    width: 4rem;
+    fill: white;
+    display: none;
+}
+.header .nav{
+    margin: 3rem 0;
+    /*background-color: lightsalmon;*/
+}
+.header .ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.header .li{
+    /*background-color: rgb(191, 128, 243);*/
+    margin: 0 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.header .li:after{
+    content: '';
+    display: block;
+    opacity: 0;
+    width:100%;
+    height:3px;
+    background-color: white;   
+}
+.header .li:hover::after{
+    opacity: 1;
+
+}
+
+/* Opción 1 */
+/* .header .li.active{
+    border-bottom: 3px solid yellow;
+} */
+
+/* Opción 2 */
+.header .li.active::after{
+    content: '';
+    display: block;
+    opacity: 1;
+    width:100%;
+    height:3px;
+    background-color: white;   
+}
+
+
+
+
+.section{
+    width: 100%;
+    /*background-color:rgb(100, 100, 245);*/
+    background-image:url(../assets/slide-1.jpg);
+    padding: 30rem 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.section .img{
+    width: 50%;
+    margin: auto;
+}
+
+
+
+
+
+.article{
+    width: 100%;
+    /*background-color: grey;*/
+    color: rgba(100, 25, 25, 0.827);
+    margin: 7rem 0;
+}
+.article .h2{
+    /*background-color: rgb(144, 133, 216);*/
+    text-align: center;
+    padding: 5rem 0;
+    font-size: 1.5rem;
+    color: rgba(51, 13, 13, 0.827);
+}
+.article .columnas{
+    width: 60%;
+    /*background-color: lightgrey;*/
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.article .h3{
+    color: rgba(51, 13, 13, 0.827);
+}
+.article .columnas .col-1{
+    width: calc(50% - 7rem);
+    margin-right: 7rem;
+    /*background-color: lightsalmon;*/
+    
+}
+.article .columnas .col-2{
+    width: calc(25% - 2rem);
+    margin-right: 2rem;
+    /*background-color: rgb(246, 145, 246);*/
+    
+}
+.article .columnas .col-3{
+    width: calc(25% - 2rem);
+    margin-right: 2rem;
+  /*background-color: rgb(117, 246, 197);*/
+}
+.article .columnas .col-1 .p{
+    line-height: 2rem;
+}
+.article .columnas .col-2 .h3{
+    /*background-color: rgb(205, 244, 49);*/
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: 500;
+}
+.article .columnas .col-2 .p{
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.article .columnas .col-3 .h3{
+    /*background-color: rgb(244, 65, 49);*/
+    margin-bottom: 2rem;
+    font-weight: 500;
+    text-align: left;
+}
+.article .columnas .col-3 .p{
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+
+
+
+
+.galeria{
+    width: 100%;
+}
+.galeria .wrapper{
+    width: 90%;
+    margin:auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.galeria .item{
+    width: calc(25% - 4rem);
+    position: relative;
+    margin: 2rem;
+}
+.galeria .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    
+    position: absolute;
+    top: 0;
+
+    transition: all 1s ease;
+}
+
+.galeria .item:hover .overlay{
+    opacity: .7;
+}
+.galeria .item:hover .h3{   
+    opacity: 1;
+}
+.galeria .img{
+    min-height: 10rem;
+    /*background-color: coral;*/
+}
+
+.galeria .h3{
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.galeria .h4{
+    font-size: 1.1em;
+    color: black;
+}
+
+
+
+
+
+.article.years{
+    width: 100%;
+   /* background-color: grey;*/
+    margin: 7rem 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+.article.years .h2{
+    width: 60%;
+    /*background-color: rgb(247, 152, 199);*/
+    margin: auto;
+    text-align: center;
+    line-height: 2.5rem;
+}
+.article.years .columnas{
+    width: 60%;
+   /* background-color: rgb(154, 185, 243);*/
+    margin-top: 5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.article.years .columna{
+    width: 40%;
+    /*background-color: rgb(190, 232, 245);*/
+}
+.article.years .year{
+    width: 100%;
+    /*background-color: rgb(226, 248, 194);*/
+    margin-bottom: 4rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.article.years .fecha{
+    width:10%;
+    
+    /*background-color: rgb(240, 149, 59);*/
+}
+.article.years .titulo{
+    width:80%;
+    /*background-color: rgb(244, 244, 133);*/
+}
+.article.years .titulo .h3{
+    /*background-color: rgb(250, 133, 112);*/
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.article.years .titulo .p{
+    /*background-color: rgb(78, 180, 180);*/
+    text-align: left;
+}
+
+
+
+.formulario{
+    width: 90%;
+    max-width: 1500px;
+    /*background-color: lime;*/
+    background-image: url(../assets/parallax.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    padding: 10rem 0;
+}
+.formulario .wrapper{
+    width: 90%;
+    max-width: 725px;
+    /*background-color: rgb(243, 148, 148);*/
+    margin: auto;
+
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.formulario .input{
+    width:calc( 50% - 2rem );
+    background:white;
+    margin: 1rem;
+    padding: 1rem;
+}
+.formulario .textarea{
+    width:calc( 100% - 2rem );
+    min-height: 200px;
+    background: white;
+    margin: 0 1rem 1rem;
+    padding: 1rem;
+}
+.formulario .submit{
+    background: white;
+    padding: 1rem 2rem;
+}
+
+
+.footer{
+    width: 100;
+    padding: 10rem 0;
+}
+.footer .wrapper{
+    width: 30%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.footer .p-mail{
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+}
+.footer .ul-rrss{
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+                                 /* RESPONSIVE */
+
+
+
+@media screen and (max-width:1850px){
+    .header .nav{
+        display: none;
+    }
+
+    .header .svg-menu{
+        display: block;
+    }
+}
+
+@media screen and (max-width:1700px){
+  .article .columnas{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    
+  }
+  .article .columnas .col{
+      margin-bottom: 4rem;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:1000px){
+    .article.years .columnas{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .article.years .columnas .columna{
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    .article.years .columnas .columna .year{
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media screen and (max-width:700px){
+    .galeria .item{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .galeria .item{
+        width: 100%;
+    }
+}

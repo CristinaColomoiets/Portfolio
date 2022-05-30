@@ -1,0 +1,13 @@
+/* 
+¿Porqué me salta en una medida? margin: 15% 0 0 0
+Cuando alineamos tenemos 2 formas de hacerlo:
+    - Usando min-height y flex
+    - Usando padding 
+    - Usando padding + flex (opcional)
+
+Cuando tenemos un título, recuerda en el reset hay una línea line-height:1.4em;
+El Before es 100% visual, es decir que no afecta a la estructura de la sección.
+Habrá que tocar el height y el top para que "visualmente" se adapte a la contenedora.
+
+El texto de presentación debe de ser absolute ya que lo queremos en el borde inferior derecho de la sección. 
+*/

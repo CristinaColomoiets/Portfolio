@@ -17,6 +17,7 @@
   --color-secondary : #D4AA7D;    
 
   --color-bg : #272727;
+  --color-bg2 : #151314; // O este #232323;
   --color-text: #EFD09E;
   --color-h2: #D2D8B3;
   --color-hover: #D2D8B3;
@@ -162,8 +163,7 @@ body {
   font-family: var(--font-main);
   color: var(--color-text);
   background-color: var(--color-primary);
-  /* opcional */
-  line-height: 1.4em;
+ 
   /* opcional */
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
