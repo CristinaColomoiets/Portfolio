@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    /*box-shadow: 0 0 0 1px rgba(0, 124, 2, 0.4);*/
 }
 
 html{
@@ -13,7 +14,7 @@ html{
 body{
     font-size: 100%;
     font-family: 'Roboto Serif', serif;
-    color: #181818;
+    color: rgba(100, 25, 25, 0.827);
 }
 form, input , select, textarea, button{
     display: block;
@@ -24,7 +25,7 @@ form, input , select, textarea, button{
 h1, h2, h3, h4, h5, h6{
     font-weight: inherit;
     font-size: inherit;
-    color: rgb(95, 95, 95);
+    color: rgba(100, 25, 25, 0.827);
 }
 li{
     list-style-type: none;
@@ -54,9 +55,23 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 
 
 
-                             /************************** Códico *************************/
+                                         /*------------------- HEADER----------------------*/
 
 
+body{
+  color: rgba(100, 25, 25, 0.827);
+}
+
+.h2{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 5rem 0;
+}
 
 .header{
     width: 100%;
@@ -64,8 +79,8 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
     position: absolute;
 }
 .header .wrapper{
-    width: 60%;
-    /*background-color: rgb(247, 150, 198);*/
+    width: 90%;
+    max-width: 1600px;
     margin: auto;
     padding: 2rem 0;
 
@@ -75,18 +90,17 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
     align-items: center;
 }
 .header .h1{
-    max-width: 10rem;
-    /*background-color: rgb(207, 245, 169);*/
-    
+    max-width: 10rem;  
 }
 .header .svg-menu{
     width: 4rem;
     fill: white;
     display: none;
+    cursor: pointer;
 }
 .header .nav{
     margin: 3rem 0;
-    /*background-color: lightsalmon;*/
+
 }
 .header .ul{
     display: flex;
@@ -95,7 +109,6 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
     align-items: center;
 }
 .header .li{
-    /*background-color: rgb(191, 128, 243);*/
     margin: 0 2rem;
     color: white;
     font-size: 1.5rem;
@@ -106,19 +119,12 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
     opacity: 0;
     width:100%;
     height:3px;
-    background-color: white;   
+    background-color: white;
+    transition: all .7s ease;   
 }
 .header .li:hover::after{
     opacity: 1;
-
 }
-
-/* Opción 1 */
-/* .header .li.active{
-    border-bottom: 3px solid yellow;
-} */
-
-/* Opción 2 */
 .header .li.active::after{
     content: '';
     display: block;
@@ -129,94 +135,72 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 }
 
 
+                                           /*-------------------SECTION-FOTO---------------------*/
+
 
 
 .section{
     width: 100%;
-    /*background-color:rgb(100, 100, 245);*/
     background-image:url(../assets/slide-1.jpg);
-    padding: 30rem 0;
+    padding: 25rem 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-.section .img{
-    width: 50%;
-    margin: auto;
+    overflow: hidden;
 }
 
 
+
+                                          /*-----------------------ARTICLE-----------------------*/
 
 
 
 .article{
     width: 100%;
-    /*background-color: grey;*/
     color: rgba(100, 25, 25, 0.827);
     margin: 7rem 0;
 }
-.article .h2{
-    /*background-color: rgb(144, 133, 216);*/
-    text-align: center;
-    padding: 5rem 0;
-    font-size: 1.5rem;
-    color: rgba(51, 13, 13, 0.827);
-}
 .article .columnas{
-    width: 60%;
-    /*background-color: lightgrey;*/
+    width: 90%;
+    max-width: 1400px;
     margin: auto;
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 .article .h3{
-    color: rgba(51, 13, 13, 0.827);
+    margin-bottom: 1rem;
+    text-align: left;
+    font-weight: 600;
 }
-.article .columnas .col-1{
+.article .p{
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.article  .col-1{
     width: calc(50% - 7rem);
     margin-right: 7rem;
-    /*background-color: lightsalmon;*/
-    
 }
-.article .columnas .col-2{
-    width: calc(25% - 2rem);
-    margin-right: 2rem;
-    /*background-color: rgb(246, 145, 246);*/
-    
-}
-.article .columnas .col-3{
-    width: calc(25% - 2rem);
-    margin-right: 2rem;
-  /*background-color: rgb(117, 246, 197);*/
-}
-.article .columnas .col-1 .p{
+.article  .col-1 .p{
     line-height: 2rem;
 }
-.article .columnas .col-2 .h3{
-    /*background-color: rgb(205, 244, 49);*/
-    margin-bottom: 2rem;
-    text-align: left;
-    font-weight: 500;
+
+.article  .col-2{
+    width: calc(25% - 2rem);
+    margin-right: 2rem;
 }
-.article .columnas .col-2 .p{
-    margin-bottom: 2rem;
-    text-align: left;
-}
-.article .columnas .col-3 .h3{
-    /*background-color: rgb(244, 65, 49);*/
-    margin-bottom: 2rem;
-    font-weight: 500;
-    text-align: left;
-}
-.article .columnas .col-3 .p{
-    margin-bottom: 2rem;
-    text-align: left;
+.article  .col-3{
+    width: calc(25% - 2rem);
+    margin-right: 2rem;
 }
 
 
+
+
+                                          /*-----------------------GALERÍA-----------------------*/
 
 
 
@@ -225,10 +209,10 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 }
 .galeria .wrapper{
     width: 90%;
+    max-width: 1400px;
     margin:auto;
-
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -243,61 +227,58 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
     background-color: white;
     
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: column nowrap;
+    justify-content:flex-end;
     align-items: center;
+    text-align: center;
     opacity: 0;
-    
     position: absolute;
     top: 0;
-
     transition: all 1s ease;
 }
-
 .galeria .item:hover .overlay{
     opacity: .7;
 }
 .galeria .item:hover .h3{   
     opacity: 1;
+    transform: translateY(-300%);
+    transform-origin: bottom;
 }
-.galeria .img{
-    min-height: 10rem;
-    /*background-color: coral;*/
+.galeria .item:hover .h4{   
+    opacity: 1;
+    transform: translateY(-300%);
+    transform-origin: bottom;
 }
 
 .galeria .h3{
-    font-size: 1.5em;
-    color: black;
-    margin-bottom: 1rem;
+    font-size: 1.2em;
+    margin-bottom: .5rem;
+    transition: all 1s ease;
 }
-
 .galeria .h4{
     font-size: 1.1em;
-    color: black;
+    transition: all 1s ease;
 }
 
 
+
+                                        /*-----------------------ARTICLE-YEARS-----------------------*/
 
 
 
 .article.years{
     width: 100%;
-   /* background-color: grey;*/
     margin: 7rem 0;
 
     display: flex;
     flex-flow: column nowrap;
-}
-.article.years .h2{
-    width: 60%;
-    /*background-color: rgb(247, 152, 199);*/
-    margin: auto;
-    text-align: center;
-    line-height: 2.5rem;
+    justify-content: center;
+    align-items: center;
 }
 .article.years .columnas{
-    width: 60%;
-   /* background-color: rgb(154, 185, 243);*/
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
     margin-top: 5rem;
 
     display: flex;
@@ -307,11 +288,9 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 }
 .article.years .columna{
     width: 40%;
-    /*background-color: rgb(190, 232, 245);*/
 }
 .article.years .year{
     width: 100%;
-    /*background-color: rgb(226, 248, 194);*/
     margin-bottom: 4rem;
 
     display: flex;
@@ -320,29 +299,27 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 }
 .article.years .fecha{
     width:10%;
-    
-    /*background-color: rgb(240, 149, 59);*/
 }
 .article.years .titulo{
     width:80%;
-    /*background-color: rgb(244, 244, 133);*/
 }
-.article.years .titulo .h3{
-    /*background-color: rgb(250, 133, 112);*/
+.article.years .h3{
     text-align: left;
     margin-bottom: 1rem;
 }
-.article.years .titulo .p{
-    /*background-color: rgb(78, 180, 180);*/
+.article.years .p{
     text-align: left;
 }
+
+
+
+                                          /*-----------------------FORMULARIO-----------------------*/
 
 
 
 .formulario{
     width: 90%;
     max-width: 1500px;
-    /*background-color: lime;*/
     background-image: url(../assets/parallax.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -353,7 +330,6 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 .formulario .wrapper{
     width: 90%;
     max-width: 725px;
-    /*background-color: rgb(243, 148, 148);*/
     margin: auto;
 
     display:flex;
@@ -380,23 +356,28 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 }
 
 
+
+
+                                           /*---------------------------FOOTER--------------------------*/
+
+
 .footer{
-    width: 100;
+    width: 100%;
     padding: 10rem 0;
 }
 .footer .wrapper{
-    width: 30%;
+    width: 80%;
     max-width: 1200px;
     margin: auto;
     text-align: center;
 }
 .footer .p-mail{
     font-size: 1.5em;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 .footer .ul-rrss{
     font-size: 1.2em;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -410,32 +391,102 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 
 
 
-                                 /* RESPONSIVE */
+                                           /*----------------------- RESPONSIVE -------------------------*/
 
 
-
-@media screen and (max-width:1850px){
-    .header .nav{
-        display: none;
+@media screen and (max-width: 1410px){
+    .galeria .h3{
+        font-size: 1em;
     }
-
-    .header .svg-menu{
-        display: block;
+    .galeria .h4{
+        font-size: 1em;
     }
 }
 
-@media screen and (max-width:1700px){
-  .article .columnas{
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-    
-  }
-  .article .columnas .col{
-      margin-bottom: 4rem;
-      width: 100%;
-  }
+@media screen and (max-width: 1400px){
+    .header .nav{
+        display: none;
+    }
+    .header .svg-menu{
+        display: block;
+    }
+
+    .article .columnas{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .article .columnas .col{
+        margin: 0 0 5rem 0;
+        width: 100%;
+    }
+    .article .p{
+        margin-bottom: 0rem;
+    }
+    .article .columnas .col-2{
+        margin: 0 0 5rem 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .article .columnas .col-3{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .galeria .item{
+        width: calc(50% - 6rem);
+        position: relative;
+        margin: 3rem;
+    }
+}
+
+@media screen and (max-width:1130px){
+    .galeria .overlay{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+    .galeria .h3{
+        transform: translateX(300%);
+        transform-origin: right;
+        transition: all 1s ease;
+    }
+    .galeria .h4{
+        transform: translateX(-300%);
+        transform-origin: left;
+        transition: all 1s ease;
+    }
+
+    .galeria .item:hover .h3{   
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    .galeria .item:hover .h4{   
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .article .columnas .col-3{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .article .wrapper-col-3{
+        margin: 0 0 5% 0;
+    }
 }
 
 @media screen and (max-width:1000px){
@@ -452,17 +503,67 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
     .article.years .columnas .columna .year{
         margin-bottom: 2rem;
     }
-
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:660px){
+    .article{
+        margin: 3rem 0;
+    }
+    .article .wrapper-col-3{
+        margin: 0 0 3rem 0;
+    }
+
     .galeria .item{
-        width: 50%;
+        width: calc(100% - 8rem);
+        position: relative;
+        margin: 3rem 4rem;
     }
 }
 
-@media screen and (max-width:400px){
-    .galeria .item{
+@media screen and (max-width: 550px){
+    .article .columnas .col-2{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .article .columnas .wrapper-col-2{
+        margin: 0 0 3rem 0;
+    }
+
+
+    .article.years{
+        margin: 3rem 0;
+    }
+    .article.years .h2{
+        line-height: 1.8rem;
+        font-size: 1rem;
+        padding: 2.5rem 0;
+    }
+
+    .footer{
         width: 100%;
+        padding: 5rem 0;
+    }
+    .footer .wrapper{
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+    .footer .p-mail{
+        font-size: 1em;
+        margin-bottom: 3rem;
+    }
+    .footer .ul-rrss{
+        font-size: 1em;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer .rools{
+        font-size: .7em;
     }
 }
