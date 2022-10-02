@@ -3,6 +3,7 @@
 body{
   color: var(--color-text);
 }
+
 .span{
   color: var(--color-hover);
 }
@@ -11,7 +12,8 @@ body{
 .header{
   
   &__container{
-    width: 98%;
+    width: 100%;
+    padding: 0 1rem;
     margin: auto;
 
     display: flex;
@@ -27,7 +29,7 @@ body{
     transition: all 1s ease;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.03);
     }
 
     &:hover .logo-ellipse {
@@ -51,7 +53,7 @@ body{
   &__nav-menu{
     width: 80%;
     font-size: 1.3em;
-    animation: slideRight 3s ease-out  1 2s both;
+    animation: slideRight 3s ease-out 2s both;
   }
 
   @keyframes slideRight{
@@ -72,23 +74,19 @@ body{
 
   &__li{
     margin: 0 0 0 10%;
-    transition: all 0.5s ease;
-
+    transition: all 0.4s ease;
+    color: var(--color-btn);
+    
     :hover {
       color: var(--color-hover);
     }
   }
-
+  
   &__a-nav{
+    // border-radius: 0.5rem;
+    // border: 1px solid var(--color-btn);  
     padding: 0.4rem 1.2rem;
-    border: 1px solid var(--color-btn);
-    color: var(--color-btn);
-    border-radius: 0.5rem;
-    transition: all 0.5s ease;
-
-    &:hover {
-      border: 1px solid var(--color-hover);
-    }
+    transition: all 0.4s ease;
   }
   
   &__close-menu{
@@ -109,7 +107,8 @@ body{
 .section__name{
   width: 100%;
   min-height: 90vh;
-  padding-bottom: 7rem;display: flex;
+  padding-bottom: 7rem;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
@@ -213,7 +212,8 @@ body{
 
   &-box-text{
   width: 90%;
-  max-width: 30rem;
+  padding-bottom: 3rem;
+  max-width: 40rem;
   font-size: 1.2em;
   position: absolute;
   bottom: 3%;
@@ -243,8 +243,8 @@ body{
     margin: 5rem auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
   }
 
   &-box-foto{
@@ -254,7 +254,6 @@ body{
 
     &:hover .section__projects-p {
       animation: goOut .7s ease 1 both; 
-
     }
   }
 
@@ -273,7 +272,7 @@ body{
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     );
-    opacity: 0.8;
+    opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
@@ -308,6 +307,36 @@ body{
       transform: translateY(0%);
     }
   }
+}
+
+.sf{
+  grid-column: 1 /4;
+  grid-row: 1;
+}
+
+.ark-sh{
+  grid-column: 2 / 7;
+  grid-row: 2 / 3;
+}
+
+.carlash{
+  grid-column: 4 / 7;
+  grid-row: 1;
+}
+
+.boxfish{
+  grid-column: 1 /4;
+  grid-row: 4;
+}
+
+.pixar{
+  grid-column: 4 / 7;
+  grid-row:  4;
+}
+
+.sony{
+  grid-column: 1 / 6;
+  grid-row:  5;
 }
 
 .section__about{
@@ -388,13 +417,16 @@ body{
   }
 
   &-year{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
     margin: 0 0 4% 0;
   }
 
   &-data{
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 600;
     transition: all 0.5s ease;
 
@@ -404,7 +436,7 @@ body{
   }
 
   &-p{
-    font-size: 1.2em;
+    font-size: 1.4em;
     transition: all 0.5s ease;
 
     &:hover {
@@ -481,7 +513,7 @@ body{
 }
 
 
-                                 /*--------------------RESPONSIVE--------------------*/
+/*--------------------------------------------------RESPONSIVE---------------------------------------------------*/
 
 
 
