@@ -1,42 +1,10 @@
-/**************------------------------- RESET -----------------------------***************/ 
+/*---------------------------------- RESET --------------------------------------*/ 
+
+
 @charset "UTF-8";
 
-
-:root{
-  --color-primary : #272727;        
-  --color-primary: #1a1819;
-  --color-secondary : #D4AA7D;    
-
-  --color-bg : #272727;
-  --color-bg2 : #151314; // O este #232323;
-  --color-text: #EFD09E;
-  --color-h2: #D2D8B3;
-  --color-hover: #D2D8B3;
-  --color-btn:#d4aa7d81;
-  --color-line: #d4aa7d81;
-
-  --font-main : 'Quicksand', sans-serif;
-  --font-secondary: 'Roboto Serif', serif;
-}
-
-/* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: black
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation: none !important;
-            animation: none !important;
-    -webkit-transition: none !important;
-    transition: none !important;
-  }
-}
-
-
-*{
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -45,7 +13,16 @@
   vertical-align: baseline;
 }
 
-img, picture, video, iframe, figure{
+:root{
+  --bg-color: #f6efe4;
+  --txt-button: blueviolet;
+  --txt-inverse: chartreuse;
+  --button-color: rgb(111, 221, 1);
+  --hover-color: blueviolet;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
   display: block;
@@ -57,6 +34,7 @@ img, picture, video, iframe, figure{
      object-position: center center;
 }
 
+/* Reseteamos los enlaces para funcionar como cajas... */
 a{
   display: block;
   text-decoration: none;
@@ -64,19 +42,23 @@ a{
   font-size: inherit;
 }
 
-p a{
+/* ... excepto los que se encuentran en párrafos */
+p, a{
   display: inline;
 }
 
+/* Quitamos los puntos de los <li> */
 li{
   list-style-type: none;
 }
 
+/* Configuramos anclas suaves */
 html{
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em{
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   font-size: 1em;
   font-weight: inherit;
   font-style: inherit;
@@ -84,12 +66,13 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em{
   color: inherit;
 }
 
-blockquote:before, blockquote:after, q:before, q:after{
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
 
-
+/* Configuramos el texto que seleccionamos */
 ::-moz-selection {
   background-color: var(--negro);
   color: var(--blanco);
@@ -99,8 +82,8 @@ blockquote:before, blockquote:after, q:before, q:after{
   color: var(--blanco);
 }
 
-
-form, input, textarea, select, button, label{
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
   -webkit-hyphens: auto;
@@ -115,18 +98,23 @@ form, input, textarea, select, button, label{
           appearance: none;
 }
 
-svg{
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
   width: 100%;
   display: block;
   fill: currentColor;
 }
 
-body{
+
+body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: var(--font-main);
-  color: var(--color-text);
-  background-color: var(--color-primary);
  
   /* opcional */
   -webkit-hyphens: auto;
@@ -138,4 +126,13 @@ body{
   -webkit-font-smoothing: antialiased;
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
+}
+
+.etiqueta{
+  width:1%;         /* Siempre en %, a excepción de algún icono o círculo */
+  max-width:1px;    /*  Siempre en PX / REM */
+}
+
+*{
+  /*box-shadow: 0 0 0 1px rgba(0, 255, 4, 0.4);*/
 }

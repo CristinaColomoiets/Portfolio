@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/*---------------------------------- RESET --------------------------------------*/
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+:root {
+  --bg-color: #f6efe4;
+  --txt-button: blueviolet;
+  --txt-inverse: chartreuse;
+  --button-color: rgb(111, 221, 1);
+  --hover-color: blueviolet;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p, a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  /* opcional */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.etiqueta {
+  width: 1%;
+  /* Siempre en %, a excepción de algún icono o círculo */
+  max-width: 1px;
+  /*  Siempre en PX / REM */
+}
+
+* {
+  /*box-shadow: 0 0 0 1px rgba(0, 255, 4, 0.4);*/
+}
+
+body {
+  background-color: #D9B29C;
+}
+
+.title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 5rem;
+  color: #53382F;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  background-color: #e6cab9;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper_input-box {
+  width: 30%;
+  margin: 4rem 0 2rem;
+  background-color: #D9B29C;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.6);
+}
+.wrapper_text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+.wrapper_input {
+  width: 80%;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 0 0 2rem 0;
+  color: #708A81;
+  outline: none;
+}
+
+.buttons {
+  width: 30%;
+  margin: 0 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.buttons_btn {
+  background-color: #708A81;
+  margin: 0.5rem 0.5rem 0;
+  padding: 0.7rem 2rem;
+  border-radius: 1.2rem;
+  border: 2px solid #e6cab9;
+  color: #e6cab9;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 30px -9px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 30px -9px rgba(0, 0, 0, 0.6);
+}
+.buttons_btn-lot {
+  background-color: #708A81;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #e6cab9;
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 30px -9px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 30px -9px rgba(0, 0, 0, 0.6);
+}
+.buttons_img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.wrapper_names {
+  width: 80%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  background-color: #e6cab9;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wrapper_names-box-name {
+  width: 50%;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #708A81;
+  border: 2px solid #D9B29C;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.wrapper_names-box-name:hover .wrapper_names-box-svg {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.wrapper_names-box-name.active {
+  background-color: hotpink;
+}
+.wrapper_names-box-txt {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-left: 2rem;
+}
+.wrapper_names-box-svg {
+  width: 2.5rem;
+  background-color: #e6cab9;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
+  -webkit-transform: translateX(130%);
+          transform: translateX(130%);
+  border: 2px solid #D9B29C;
+  cursor: pointer;
+}
+.wrapper_names-svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #708A81;
+}

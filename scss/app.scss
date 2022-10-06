@@ -13,7 +13,7 @@ body{
   
   &__container{
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 2rem 0 1rem;
     margin: auto;
 
     display: flex;
@@ -26,10 +26,10 @@ body{
 
   &__svg-logo{
     width: 4rem;
-    transition: all 1s ease;
+    transition: all .7s ease;
 
     &:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     &:hover .logo-ellipse {
@@ -53,7 +53,7 @@ body{
   &__nav-menu{
     width: 80%;
     font-size: 1.3em;
-    animation: slideRight 3s ease-out 2s both;
+    animation: slideRight 3s ease-out 1.5s both;
   }
 
   @keyframes slideRight{
@@ -74,19 +74,16 @@ body{
 
   &__li{
     margin: 0 0 0 10%;
-    transition: all 0.4s ease;
+    transition: all 0.7s ease;
     color: var(--color-btn);
     
-    :hover {
+    :hover{
       color: var(--color-hover);
     }
   }
   
   &__a-nav{
-    // border-radius: 0.5rem;
-    // border: 1px solid var(--color-btn);  
-    padding: 0.4rem 1.2rem;
-    transition: all 0.4s ease;
+    transition: all 0.7s ease;
   }
   
   &__close-menu{
@@ -107,7 +104,7 @@ body{
 .section__name{
   width: 100%;
   min-height: 90vh;
-  padding-bottom: 7rem;
+  padding: 7rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -117,15 +114,18 @@ body{
   &::before{
   content: "";
   display: block;
+
   width: 100%;
   height: 90%;
+
   background-color: var(--color-bg2);
   border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
+
   position: absolute;
   top: 8%;
   left: 0;
-  transform: skew(0, 4deg);
+  transform: skew(0, 5deg);
   }
 
   &-h1{
@@ -144,7 +144,7 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
     }
 
     &::after{
@@ -157,7 +157,7 @@ body{
     bottom: 0;
     left:-20%;
     z-index: 2;
-    animation: slideRight-name 3s ease-out both;
+    animation: slideRight-name 4s ease-out both;
     }
     @keyframes slideRight-name{
       from{
@@ -198,7 +198,7 @@ body{
     bottom: 0;
     right: 0;
 
-    animation: slideLeft 3s ease-out both;
+    animation: slideLeft 4s ease-out both;
   }
   @keyframes slideLeft{
     from{
@@ -214,11 +214,11 @@ body{
   width: 90%;
   padding-bottom: 3rem;
   max-width: 40rem;
-  font-size: 1.2em;
+  font-size: 1.1em;
   position: absolute;
   bottom: 3%;
   right: 3%;
-  transition: all .9s ease;
+  transition: all .7s ease;
 
     &:hover{
       color: var(--color-hover);
@@ -227,11 +227,11 @@ body{
 }
 
 .section__projects{
-  padding: 5rem 0 10rem 0;
+  padding: 6rem 0;
 
   &-h3{
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     font-size: 2em;
     font-weight: 600;
@@ -239,139 +239,88 @@ body{
 
   &-wrapper{
     width: 90%;
-    max-width: 1200px;
-    margin: 5rem auto;
+    max-width: 1400px;
+    margin: 4rem auto;
 
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-column{
+    width: 33%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &-box-foto{
     position: relative;
-    border-radius: 1rem;
     overflow: hidden;
-
-    &:hover .section__projects-p {
-      animation: goOut .7s ease 1 both; 
-    }
+    padding: .7rem;
   }
 
   &-item{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
   }
 
   &-overlay{
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    opacity: 0.5;
+    background-color: black;
+    
+    opacity: 0.2;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 1s ease;
+    transition: all .7s ease;
 
     &:hover{
-      opacity: 0.2;
-    }
-  }
-
-  &-p{
-    width: 100%;
-    color: var(--color-text);
-    text-transform: uppercase;
-    font-size: 1.2em;
-    font-weight: 600;
-    padding: 0.5rem 0;
-    background-color: var(--color-primary);
-   
-    text-align: center;
-    opacity: 0;
-    position: absolute;
-  }
-
-  @keyframes goOut{
-    from {
       opacity: 0;
-      transform: translateY(200%);
-    }
-    to {
-      opacity: 0.8;
-      transform: translateY(0%);
     }
   }
-}
-
-.sf{
-  grid-column: 1 /4;
-  grid-row: 1;
-}
-
-.ark-sh{
-  grid-column: 2 / 7;
-  grid-row: 2 / 3;
-}
-
-.carlash{
-  grid-column: 4 / 7;
-  grid-row: 1;
-}
-
-.boxfish{
-  grid-column: 1 /4;
-  grid-row: 4;
-}
-
-.pixar{
-  grid-column: 4 / 7;
-  grid-row:  4;
-}
-
-.sony{
-  grid-column: 1 / 6;
-  grid-row:  5;
 }
 
 .section__about{
+  display: flex;
+  flex-flow: column nowrap;
   position: relative;
   padding: 5rem 0;
 
   &::before{
     content: "";
     display: block;
+
     width: 100%;
     height: 100%;
     background-color: var(--color-bg2);
+
     position: absolute;
     top: 0;
     z-index: 1;
     border-top: 1px solid var(--color-line);
     border-bottom: 1px solid var(--color-line);
-    transform: skew(0, 4deg);
+    transform: skew(0, 5deg);
     pointer-events: none;
   }
 
   &-h3{
     width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     font-size: 2em;
     font-weight: 600;
-    z-index: 2;
+    z-index: 1;
     position: relative;
   }
 
-  &-wrapper-grid{
+  &-wrapper{
     width: 90%;
-    max-width: 1200px;
-    margin: 5rem auto;
+    max-width: 1400px;
+    margin: 4rem auto;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -380,26 +329,33 @@ body{
   }
 
   &-img{
-    opacity: 0.5;
-    border-radius: 1rem;
+    opacity: 0.7;
     width: 40%;
     max-width: 1200px;
     margin: 0 3% 0 0;
   }
 
   &-p-name{
-    font-size: 1.5em;
-    transition: all 0.5s ease;
-    margin: 0 0 .5rem 0;
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    transition: all 0.7s ease;
   }
 
   &-txt-about{
-    font-size: 1.1em;
-    line-height: 1.4;
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 1.8;
 
     &:hover {
       color: var(--color-hover);
     } 
+  }
+
+  &-column-studies{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+    z-index: 2;
   }
 
   &-h4 {
@@ -426,9 +382,9 @@ body{
   }
 
   &-data{
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 600;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
 
     &:hover {
       color: var(--color-hover);
@@ -436,8 +392,8 @@ body{
   }
 
   &-p{
-    font-size: 1.4em;
-    transition: all 0.5s ease;
+    font-size: 1.2em;
+    transition: all 0.7s ease;
 
     &:hover {
       color: var(--color-hover);
@@ -445,22 +401,22 @@ body{
   }
 }
 
-.section__contactos{
-  padding: 4rem 0 0 0;
+.section__contacts{
+  padding: 2rem 0 0 0;
 
   &-h3 {
     width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     font-size: 2em;
     font-weight: 600;
   }
 
   &-wrapper {
     width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 5rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 0;
 
     display: flex;
     flex-flow: column nowrap;
@@ -485,7 +441,7 @@ body{
     width: 2rem;
     height: 2rem;
     margin: 0 2rem 0 0;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
 
     &:hover {
       color: var(--color-hover);
@@ -493,15 +449,12 @@ body{
     }
   }
 
-  &-p {
-    margin: 0 0 0 1rem;
-  }
 }
 
 .a__arrow{
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 1;
 
   &-arrow-up{
