@@ -1,0 +1,257 @@
+@import"_reset";
+
+
+body{
+    background-color:var(--bg-color);
+    font-family: var(--fonts);
+}
+
+.h1-tittle{
+    margin: 3rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--color-h1);
+}
+
+.to_do{
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0;
+    background-color: var(--bg-task);
+    border-radius: 2rem;
+
+    &-wrapper-input{
+        width: 95%;
+        margin: auto;
+        padding: 2rem 0;
+        background-color: var(--bg-input);
+        border-radius: 2rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &-input{
+        width: 90%;
+        padding: 1.2rem 1rem;
+        background-color: var(--color-input);
+        border-radius: 2rem;
+        color: var(--color-h1);
+    }
+
+    &-button-add{
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: var(--color-btn-add);
+        border-radius: 50%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover{
+            background-color: var(--hover-color);
+        }
+    }
+
+    &-svg-plus{
+        width: 2rem;
+        height: 2rem;
+        color: darkslategrey;
+    }
+
+    &-section-task{
+        width: 95%;
+        margin: 2rem auto;
+        padding: 1rem;
+        border-radius: 2rem;
+        background-color: var(--bg-section);
+    }
+
+    &-h2-tittle{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--color-tittle);
+        margin: 0 0 1rem 0;
+    }
+
+    &-li-task-box{
+        width: 95%;
+        margin: 1rem auto;
+        padding: .5rem .6rem;
+        border: 1px solid var(--color-border);
+        border-radius: 2rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-txt-task);
+    }
+
+    &-box-buttons{
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        align-items: center;
+        color: var(--color-svg);
+    }
+    
+    &-button-task{
+        margin: 0 .5rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 1px solid var(--color-border);
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .5s ease;
+        
+        &:hover{
+            border: 1px solid var(--hover-color);
+        }
+
+        &:hover .to_do-svg-task{
+            color: var(--hover-color);
+        }
+        
+    }
+    
+    &-svg-task{
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all .5s ease;
+    }
+
+
+    .box-desactive{
+        width: 95%;
+        margin: 1rem auto;
+        padding: .5rem .5rem;
+        border: 1px solid grey;
+        border-radius: 2rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        color: grey;
+        text-decoration: line-through;
+    }
+
+    .btn-desactive{
+        margin: 0 .5rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 1px solid grey;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .5s ease;
+        
+        &:hover{
+            border: 1px solid var(--hover-color);
+        }
+
+        &:hover .svg-desactive{
+            color: var(--hover-color);
+        }
+    }
+
+    .svg-desactive{
+        color: grey;
+        width: 1.5rem;
+        height: 1.5rem;
+        transition: all .5s ease;
+    }
+
+}
+
+
+//------------ Responsive -------------
+
+@media screen and(max-width: 1000px){
+    .to_do-input{
+        width: 80%;
+    }
+}
+
+@media screen and(max-width: 800px){
+    .to_do-li-task-box{
+        padding: .3rem .5rem;
+        border-radius: 2rem;
+    }
+
+    .to_do-button-task{
+        margin: 0 .3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .to_do-svg-task{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .to_do .box-desactive{
+        padding: .3rem .5rem;
+        border-radius: 2rem;
+    }
+
+    .to_do .btn-desactive{
+        margin: 0 .3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .to_do .svg-desactive{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+}
+
+@media screen and(max-width: 600px){
+    .h1-tittle{
+        font-size: 2rem;
+    }
+
+    .to_do-input{
+        padding: 1rem;
+    }
+
+    .to_do-button-add{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .to_do-button-task{
+        margin: 0 .2rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .to_do-svg-task{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .to_do .btn-desactive{
+        margin: 0 .3rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .to_do .svg-desactive{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}

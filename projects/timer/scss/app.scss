@@ -1,0 +1,139 @@
+@import"_reset";
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    width: 40rem;
+    max-width: 1200px;
+    background-color: rgb(158, 55, 255);
+    padding: 5rem 0;
+    border-radius: 4rem;
+    box-shadow: 0 0 30px -2px rgb(0 0 0 / 60%);
+}
+
+.wrapper_numbers{
+    width: 100%;
+    //background-color: rgb(255, 6, 6);
+    font-size: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &-box-number{
+        //background-color: white;
+        width: 15%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-hours{
+        color: rgb(143, 216, 240);
+    }
+    &-minuts{
+        color: rgb(246, 78, 213);
+    }
+    &-seconds{
+        color: rgb(98, 228, 69);
+    }
+    &-milliseconds{
+        color: rgb(255, 141, 2);
+    }
+
+    &-points{
+        color: white;
+        margin: 0 .5rem;
+    }
+    
+}
+
+.buttons{
+    //background-color: rgb(248, 192, 240);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 2rem 0 0 0;
+    
+
+    &_button{
+        text-transform: uppercase;
+        font-size: .7rem;
+        font-weight: 700;
+        border: 2px solid chartreuse;
+        border-radius: 1rem;
+        padding: .5rem 1rem;
+        margin: 0 .3rem;
+        background-color: var(--button-color);
+        color: var(--txt-button);
+        cursor: pointer;
+        box-shadow: 0 0 21px -1px rgb(0, 0, 0, 0.60);
+
+        &:focus{
+            background-color: var(--hover-color);
+            color: var(--txt-inverse);
+        }
+    }
+}
+
+.time_saved{
+    //background-color: burlywood;
+    width: 90%;
+    margin: 5rem 0;
+
+    &-wrapper-number{
+        width: 40rem;
+        height: 4rem;
+        max-width: 1200px;
+        background-color: rgb(191, 125, 253);
+        margin:  0 auto 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 0 0 1rem;
+        border-radius: 2rem;
+        font-size: 3rem;
+        color: white;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover .time_saved-box-svg{
+           transform: translateX(0%);
+        }
+    }
+
+    &-box-svg{
+        width: 4rem;
+        height: 4rem;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        transition: .7s all ease;
+        transform: translateX(130%);
+        border: 1px solid rgb(201, 145, 253);
+        cursor: pointer;
+    }
+
+    &-svg{
+        width: 2rem;
+        height: 2rem;
+        fill: rgb(201, 145, 253);
+    }
+} 
+
+.desactive{
+   display: none;
+}
+
