@@ -82,6 +82,14 @@ img , picture{
     text-transform: uppercase;
 }
 
+.header .svg-menu{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: orange;
+    cursor: pointer;
+    display: none;
+}
+
 
 
 .blanco{
@@ -229,5 +237,138 @@ img , picture{
 
 
 
+@media screen and (max-width:1000px){
+    .blanco .image{
+        width: 30%;
+    }
+    .blanco .descripcion{
+        width: 70%;
+    }
+
+    .amarillo .image{
+        width: 30%;
+    }
+    .amarillo .descripcion{
+        width: 70%;
+    }
+}
 
 
+@media screen and (max-width:850px){
+    .header .li{
+        margin: 0 1rem;
+    }
+
+    .blanco .wrapper{    
+        width: 90%; 
+        padding: 3rem 0 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .amarillo .wrapper{    
+        width: 90%; 
+        padding: 3rem 0 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blanco .image{
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+
+    .amarillo .image{
+        width: 50%;
+        margin-top: 3rem;
+    }
+
+    .blanco .descripcion{
+        width: 90%;
+    }
+
+    .amarillo .descripcion{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .header .ul{
+        display: none;
+    }
+
+    .header .svg-menu{
+        display: block;
+    }
+
+    .blanco .wrapper{    
+        width: 90%; 
+        padding: 2rem 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .amarillo .wrapper{    
+        width: 90%; 
+        padding: 2rem 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blanco .image{
+        width: 70%;
+        margin-bottom: 3rem;
+    }
+
+    .amarillo .image{
+        width: 70%;
+        margin-top: 3rem;
+    }
+
+    .blanco .descripcion{
+        width: 90%;
+        margin-left: 0rem;
+    }
+
+    .amarillo .descripcion{
+        width: 90%;
+        margin-right: 0rem;
+    }
+}
+
+@media screen and ( max-width: 400px){
+    .blanco .wrapper{    
+        padding: 0;
+    }
+
+    .amarillo .wrapper{    
+        padding: 0;
+    }
+
+    .blanco .descripcion{
+        width: 95%;
+    }
+
+    .footer-logo{
+        font-size: 5em;
+    }
+
+    .footer .li{
+        margin: 0 1rem;
+        color: white;
+    }
+    
+    .footer-svg{
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+}
