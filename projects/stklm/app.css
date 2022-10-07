@@ -3,21 +3,15 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    /*box-shadow: 0 0 0 1px rgba(0,0,0,0.5);*/
 }
 
 html{
     font-size: 100%;
-    scroll-behavior: smooth;      /* en el caso de ancla (enlace) */
-}
-body{
-    font-size: 100%;
+    scroll-behavior: smooth;      
 }
 
-.clear::after{
-    clear: both;
-    content: "";
-    display: block;
+body{
+    font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -49,90 +43,83 @@ img , picture{
 
 .header{
     width: 100%;
-   /* background-color: rgb(180, 180, 180);*/
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
-.header .wrapper{          /* Al wrapper siempre ponemos min-width con rem.*/
-    width: 80%;
-    /*background-color: rgb(223, 117, 117);*/
+
+.header .wrapper{         
+    width: 90%;
+    max-width: 1400px;
     margin: auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.header .wrapper .logo .a{
-    width: 50%;
-    /*background-color: rgb(202, 247, 157);*/
-    float: left;
+
+.h1-logo{
+    font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.header .wrapper .menu{
-    width: 50%;
-   /* background-color: rgb(186, 127, 228);*/
-    float: right;
-    text-transform: uppercase;
-}
-.header .wrapper .menu .ul{}
-.header .wrapper .menu .ul .home{
-    /*background-color: rgb(86, 233, 225);*/
-    float: left;
-    margin: 0 0 0 2rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-size: 0.7rem;
+
+.header .home{
     color: orange;
 }
-.header .wrapper .menu .ul .li{
-    /*background-color: rgb(86, 233, 225);*/
-    float: left;
-    margin: 0 0 0 2rem;
+
+.header .ul{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .li{
+    margin: 0 2rem;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
-.header .wrapper .menu .ul .li .a{}
 
 
-
-
-.main{}
 
 .blanco{
     width: 100%;
-   /* background-color: rgb(183, 195, 207); */
-    padding: 20rem 0;
+    padding: 5rem 0rem;
 }
+
 .blanco .wrapper{     
     width: 80%;
-    /*background-color: rgb(245, 181, 245);*/
+    max-width: 1400px;
     margin: auto;
+    padding: 5rem 0 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-.blanco .wrapper .image{
-    max-width: 30rem;
-    /*background-color: rgb(136, 247, 204);*/
-    float: left;
-    margin-right: 7rem;
+
+.blanco .descripcion{
+    margin-left: 3rem;
+    text-align: left;
+    font-size: 1.2rem;
 }
-.blanco .wrapper .descripcion{
-    max-width: 30rem;
-   /* background-color: rgb(136, 174, 245);*/
-    float: left;
-    text-align:left;
-}
-.blanco .wrapper .descripcion .titulo{
+
+.blanco .descripcion .titulo{
     width: 100%;
-    /*background-color: rgb(5, 189, 5);*/
     font-size: 2em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 1rem;
 }
-.blanco .wrapper .descripcion .p{}              
-.blanco .wrapper .descripcion .a{    
-    /*background-color: tomato;*/
-    display: inline-block;                       /* ponemos esta propiedad para botones */
-    border: orange solid;           /* Con el boton siempre aplicamos display:inline-block y padding */
+
+.blanco .boton{    
+    display: inline-block;                       
+    border: orange solid 1px;           
     padding: 1rem 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -143,49 +130,49 @@ img , picture{
 
 
 
+
 .amarillo{
     width: 100%;
-    background-color: rgb(241, 200, 124);
-    padding: 20rem 0;
+    background-color: rgb(215, 141, 4);
+    padding: 5rem 0;
 }
+
 .amarillo .wrapper{     
     width: 80%;
+    max-width: 1400px;
     margin: auto;
+    padding: 5rem 0 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.amarillo .wrapper .descripcion{
-    max-width: 30rem;
-    margin-right: 7rem;
-    /*background-color: rgb(243, 224, 114);*/
-    float: left;
+.amarillo .descripcion{
+    margin-right: 3rem;
     text-align:right;
     color: white;
+    font-size: 1.2rem;
 }
 
-.amarillo .wrapper .image{
-    max-width: 30rem;
-    /*background-color: rgb(136, 247, 204);*/
-    float: left;
-}
-.amarillo .wrapper .descripcion .titulo{
+.amarillo .descripcion .titulo{
     width: 100%;
-    /*background-color: rgb(5, 189, 5);*/
     font-size: 2em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-.amarillo .wrapper .descripcion .p{}                      
-.amarillo .wrapper .descripcion .a{                      
-    background-color: white;
-    display: inline-block;                                /* ponemos esta propiedad para botones */
-    border: orange solid;                   /* Con el boton siempre aplicamos display:inline-block y padding */
+    margin-bottom: 1rem;
+}    
+
+.amarillo .boton{                      
+    display: inline-block;                       
+    border: white solid 1px;           
     padding: 1rem 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: orange;
+    color: white;
     font-size: 0.7rem;
     font-weight: 300;
 }
@@ -194,48 +181,51 @@ img , picture{
 
 .footer{
     width: 100%;
+    height: 100vh;
     background-color:rgb(68, 68, 68);
-    padding: 15rem 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
-.footer .wrapper{        /* Al wrapper siempre ponemos min-width con rem.*/
-    max-width: 38rem; 
-    /*background-color: rgb(112, 243, 243);*/
-    margin: auto;   
-    padding: 4rem;
 
+.footer .wrapper{        
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
 }
-.footer .wrapper .logo{
-   /* background-color: coral;*/
+
+.footer-logo{
     font-size: 6em;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: white;
-    margin: auto;
-    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.footer .wrapper .copy{
-    /*background-color: aqua;*/
-    margin: auto;
-    text-align: center;
+
+.footer .copy{
     color: white;
 }
-.footer .wrapper .rrss{
-    width: 100%;
-    /*background-color: tomato;*/
-    text-align: center;
-    margin-top: 1rem;
-    
-}
-.footer .wrapper .rrss .red{
-    /*background-color: yellowgreen;*/
-    margin: 0 2rem 0 2rem;
-    display: inline-block;
-    float: left;
+
+.footer .ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
+.footer .li{
+    margin: 0 2rem;
+    color: white;
+}
 
+.footer-svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
 
 
