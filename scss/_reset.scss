@@ -91,12 +91,12 @@ blockquote:before, blockquote:after, q:before, q:after{
 
 
 ::-moz-selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--color-hover);
+  color: var(--color-primary);
 }
 ::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: var(--color-hover);
+  color: var(--color-primary);
 }
 
 

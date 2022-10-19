@@ -1,0 +1,282 @@
+@media screen and (max-width:1450px){
+    .section__name-h1{
+      transition: all .7s ease;
+      transform: translateX(-15%);
+    }
+}
+
+  
+@media screen and(max-width:1300px){
+.section__name-h1{
+    transform: translateX(-10%);
+}
+.section__name-h2{
+    transform: translateX(18%);
+}
+}
+
+  
+@media screen and (max-width: 1170px){
+
+}
+
+
+@media screen and (max-width: 1120px){
+.section__name-h1{
+    font-size: 5.5em;
+}
+
+.section__name-h2{
+    font-size: 4.5em;
+}
+}
+
+
+@media screen and (max-width: 1050px){
+.section__name-box-name{
+    text-align: center;
+}
+.section__name-h1{
+    font-size: 5em;
+    margin-bottom: .7rem;
+    transform: translateX(0%);
+}
+.section__name-h2{
+    font-size: 4em;
+    transform: translateX(0%);
+}
+.section__name-box-text{
+    font-size: 1em;
+    bottom: 5%;
+}
+
+.section__about-p-name{
+    font-size: 2.5rem;
+}
+}
+
+  
+@media screen and(max-width:950px){
+.section__about-wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.section__about-img{
+    width: 90%;
+    height: 88vh;
+    margin: 0 auto 5%;
+}
+.section__about-box-txt{
+    width: 90%;
+}
+}
+
+
+@media screen and (max-width:850px){
+.section__name{
+    min-height: 80vh;
+}
+.section__name-h1{
+    font-size: 4em;
+}
+.section__name-h2{
+    font-size: 3em;
+}
+.section__name-box-text{
+    font-size: .9em;
+}
+
+.header__svg-logo{
+    width: 3rem;
+}
+.header__nav-menu{
+    width: 80%;
+    font-size: 1.1em;
+}
+
+.section__projects-box-foto{
+    padding: .5rem;
+}
+}
+
+
+@media screen and (max-width:660px){
+.header__container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header__nav-menu{
+    display: none;
+}
+.header__svg-menu{
+    display: block;
+}
+.header__nav-menu.active{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index:2;
+    background-color: var(--color-primary);
+    color: var(--color-primary);
+    display: block;
+
+    animation: slideMenu 1s ease;
+    transition: all 1s ease;
+
+    @keyframes slideMenu{
+    from{
+        transform: translateX(150%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    }
+    
+    .header__ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    }
+    
+    .header__a-nav{
+    width: 100%;
+    font-size: 3.5rem;
+    margin: 3rem 0;
+    color: var(--color-text);
+    }
+
+    .header__close-menu{
+    display: flex;
+    }
+    
+}
+
+
+
+.section__name::before{
+    height: 90%;
+}
+.section__name-h1{
+    font-size: 3.5em;
+}
+.section__name-h2{
+    font-size: 2.5em;
+}
+.section__name-box-text{
+    width: 60%;
+    font-size: .8em;
+}
+
+
+
+.section__projects{
+    padding-bottom: 2rem;
+}
+.section__projects-wrapper{
+    width: 90%;
+    max-width: 1400px;
+    margin: 3rem auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section__projects-column{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section__projects-box-foto{
+    padding: .7rem;
+}
+
+
+.section__about-data{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.section__about-p{
+    font-size: 1em;
+}
+.section__about-txt-about{
+    text-align: center;
+}
+.section__about-p-name{
+    text-align: center;
+}
+
+
+
+.section__contactos-txt{
+    font-size: 1em;
+}
+.section__contactos-svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 2rem 0 0;
+}
+.section__contactos-p{
+    font-size: .7em;
+}
+
+.a__arrow-arrow-up{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+}
+
+
+@media screen and(max-width:550px){
+.section__name-h1{
+    font-size: 3em;
+}
+
+.section__about-p-name{
+    font-size: 2.3rem;
+    text-align: center;
+}
+.section__about-img{
+    width: 100%;
+}
+}
+
+
+@media screen and(max-width:470px){
+.section__name::before{
+    height: 80%;
+}
+.section__name-h1{
+    font-size: 2.5em;
+}
+.section__name-h2{
+    font-size: 2.3em;
+}
+.section__name-box-text{
+    bottom: 13%;
+    
+}
+
+
+.section__projects{
+    padding: 0;
+}
+
+
+.section__about-p-name{
+    font-size: 2.1rem;
+}
+.section__about-txt-about{
+    font-size: 1.1rem;
+    text-align: center;
+}
+}

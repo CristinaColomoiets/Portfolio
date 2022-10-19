@@ -167,8 +167,10 @@ body {
           align-items: center;
 }
 .wrapper_input-box {
-  width: 30%;
+  width: 60%;
+  max-width: 1500px;
   margin: 4rem 0 2rem;
+  padding: 2rem 4rem;
   background-color: #D9B29C;
   border-radius: 1rem;
   display: -webkit-box;
@@ -190,7 +192,7 @@ body {
 .wrapper_text {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin: 2rem 0;
 }
 .wrapper_input {
@@ -204,7 +206,7 @@ body {
 }
 
 .buttons {
-  width: 30%;
+  width: 100%;
   margin: 0 0 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,7 +285,8 @@ body {
           align-items: center;
 }
 .wrapper_names-box-name {
-  width: 50%;
+  width: 60%;
+  max-width: 1400px;
   margin: 1rem 0;
   font-size: 1.5rem;
   color: #708A81;
@@ -310,7 +313,7 @@ body {
           transform: translateX(0%);
 }
 .wrapper_names-box-name.active {
-  background-color: hotpink;
+  background-color: yellow;
 }
 .wrapper_names-box-txt {
   width: 90%;
@@ -357,4 +360,78 @@ body {
   width: 2rem;
   height: 2rem;
   fill: #708A81;
+}
+
+@media screen and (max-width: 950px) {
+  .wrapper_input-box {
+    padding: 0.5rem;
+  }
+
+  .wrapper_names-box-name {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .wrapper_input-box {
+    width: 90%;
+    max-width: 1500px;
+    padding: 1rem;
+  }
+
+  .wrapper_input-box {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .buttons_btn {
+    margin: 0.4rem 0.5rem 0;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .wrapper_names-box-name {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 410px) {
+  .wrapper_input-box {
+    width: 90%;
+    max-width: 1500px;
+    padding: 0.3rem;
+  }
+
+  .wrapper_input {
+    width: 90%;
+  }
+
+  .wrapper_text {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .buttons {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .buttons_btn {
+    margin: 0rem 0.4rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .buttons_btn-lot {
+    margin: 0rem;
+  }
 }
