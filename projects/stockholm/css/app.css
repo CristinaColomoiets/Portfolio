@@ -54,10 +54,6 @@ object-fit: cover;             /* se usa mas para imagenes que tienen que cubrir
 
 
 
-
-                                         /*------------------- HEADER----------------------*/
-
-
 body{
   color: rgba(100, 25, 25, 0.827);
 }
@@ -81,7 +77,7 @@ body{
     width: 90%;
     max-width: 1600px;
     margin: auto;
-    padding: 2rem 0;
+    padding: 1.7rem 0;
 
     display: flex;
     flex-flow: row nowrap;
@@ -90,16 +86,16 @@ body{
     position: relative;
 }
 .header .h1{
-    max-width: 10rem;
+    max-width: 15%;
 }
 .header .svg-menu{
-    width: 4rem;
+    width: 2rem;
     fill: white;
     display: none;
     cursor: pointer;
 }
 .header .nav{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 .header .ul{
     display: flex;
@@ -115,20 +111,21 @@ body{
     content: '';
     display: block;
     opacity: 0;
-    width:100%;
-    height:3px;
+    width: 100%;
+    height: 1px;
     background-color: white;
     transition: all .7s ease;   
 }
 .header .li:hover::after{
     opacity: 1;
+    transform-origin: center;
 }
 .header .li.active::after{
     content: '';
     display: block;
     opacity: 1;
     width:100%;
-    height:3px;
+    height:1px;
     background-color: white;   
 }
 
@@ -152,30 +149,33 @@ body{
 }
 
 
-                                           /*-------------------SECTION-FOTO---------------------*/
-
-
 
 .section-img{
     width: 100%;
     background-image:url(../assets/slide-1.jpg);
-    padding: 25rem 0;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
+    height: 100vh;
     overflow: hidden;
 }
+.section-img .box-img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.section-img .img{
+    margin: 0 auto;
+    width: 50%; 
+}
 
-
-
-                                          /*-----------------------ARTICLE-----------------------*/
 
 
 
 .article{
     width: 100%;
     color: rgba(100, 25, 25, 0.827);
-    margin: 7rem 0;
+    margin: 5rem 0;
 }
 .article .columnas{
     width: 90%;
@@ -198,11 +198,11 @@ body{
 }
 
 .article  .col-1{
-    width: calc(50% - 7rem);
-    margin-right: 7rem;
+    width: calc(50% - 5rem);
+    margin-right: 5rem;
 }
 .article  .col-1 .p{
-    line-height: 2rem;
+    line-height: 1.7rem;
 }
 
 .article  .col-2{
@@ -214,10 +214,6 @@ body{
     margin-right: 2rem;
 }
 
-
-
-
-                                          /*-----------------------GALERÍA-----------------------*/
 
 
 
@@ -234,9 +230,9 @@ body{
     align-items: center;
 }
 .galeria .item{
-    width: calc(25% - 4rem);
+    width: calc(25% - 2rem);
     position: relative;
-    margin: 2rem;
+    margin: 1rem;
 }
 .galeria .overlay{
     width: 100%;
@@ -279,13 +275,9 @@ body{
 
 
 
-                                        /*-----------------------ARTICLE-YEARS-----------------------*/
-
-
-
 .article.years{
     width: 100%;
-    margin: 7rem 0;
+    margin: 4rem 0;
 
     display: flex;
     flex-flow: column nowrap;
@@ -296,7 +288,7 @@ body{
     width: 90%;
     max-width: 1400px;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     display: flex;
     flex-flow: row nowrap;
@@ -330,9 +322,6 @@ body{
 
 
 
-                                          /*-----------------------FORMULARIO-----------------------*/
-
-
 
 .formulario{
     width: 90%;
@@ -341,8 +330,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     margin: auto;
-    padding: 10rem 0;
+    padding: 5rem 0;
 }
 .formulario .wrapper{
     width: 90%;
@@ -366,21 +356,20 @@ body{
     background: white;
     margin: 0 1rem 1rem;
     padding: 1rem;
+    color: grey;
 }
 .formulario .submit{
     background: white;
     padding: 1rem 2rem;
+    cursor: pointer;
+    color: grey;
 }
 
 
 
-
-                                           /*---------------------------FOOTER--------------------------*/
-
-
 .footer{
     width: 100%;
-    padding: 10rem 0;
+    padding: 5rem 0;
 }
 .footer .wrapper{
     width: 80%;
@@ -390,15 +379,18 @@ body{
 }
 .footer .p-mail{
     font-size: 1.5em;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
 }
 .footer .ul-rrss{
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 3rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+}
+.footer .rools{
+    font-size: .9em;
 }
 
 
