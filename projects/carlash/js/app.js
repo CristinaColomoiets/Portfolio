@@ -1,6 +1,3 @@
-// Cuando yo pongo el raton por encima de una .li, a los demás se les aplica la clase "opacity".
-// Y ese mismo .li (ESE INDICE),no. Se le quita.
-
 
 $('.li').mouseover(function(){
     let indice = $('.li').index( $(this) )
@@ -17,9 +14,6 @@ $('.li').mouseout(function(){
 })
 
 
-
-// Cuando pongo el raton por encima de la clase .li, aparece su imagen, mejor dicho se le añade la clase 'activo'
-// Y a los demás se les quita.
 
 $('.li').mouseover(function(){
     let indice = $('.li').index( $(this) )

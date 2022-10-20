@@ -55,35 +55,29 @@ img{
     --font-secun: "Popins", sans-serif;
     --txt-font-p: 'Tapestry', cursive;
 }
-.etiqueta{
-    width:1%;         /* Siempre en %, a excepción de algún icono o círculo */
-    max-width:1px;    /*  Siempre en PX / REM */
-}
 
 
 
 
 
-/******************* Mi Códico ******************/
 
 .background{
     width: 100%;
     min-height: 100vh;
     background-color: var(--color-bg);
-
     position: relative;
 }
 .background .wrapper{
-    width: 70%;
-    /*background: rgb(166, 245, 245);*/
-    margin: 20% 15% 0 10%;
+    width: 90%;
     position: absolute;
+    top: 5%;
+    left: 3%;
 
     z-index: 1;
 }
 .wrapper .ul{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -91,7 +85,7 @@ img{
     color: var(--txt-color-main);
     cursor: pointer;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: flex-end;
     opacity: 1;
@@ -100,12 +94,10 @@ img{
     opacity: 0.5;
 }
 .wrapper .h2{
-    /*background: rgb(240, 240, 173);*/
-    font-size: 6em;
+    font-size: 4em;
     font-family: var(--font-main);
     
     font-weight: 600;
-    margin-left: 3rem;
     margin-bottom: 3rem;
 
 }
@@ -114,7 +106,7 @@ img{
     font-size: 1em;
     
     margin-left: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .images{
@@ -126,6 +118,7 @@ img{
 }
 .images .img{
     display: none;
+    background-position: contain;
 
     animation: move 10s ease 1 0s both;
 }
@@ -145,4 +138,52 @@ img{
 }
 .images img.activo{
     display: block;
+}
+
+
+@media screen and (max-width: 900px){
+    .background .wrapper{
+        height: 100vh;
+    }
+
+    .wrapper .h2{
+        font-size: 3em;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .wrapper .h2{
+        font-size: 2.5em;
+        margin-bottom: 2.5rem;
+    }
+    .wrapper .p{ 
+        font-size: .9em;
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+    .wrapper .h2{
+        font-size: 2em;
+        margin-bottom: 2rem;
+    }
+    .wrapper .p{ 
+        font-size: .9em;
+        margin-bottom: 2.2rem;
+    }
+
+}
+
+@media screen and (max-width: 355px){
+    .wrapper .h2{
+        font-size: 1.8em;
+        margin-bottom: 2rem;
+    }
+    .wrapper .p{ 
+        font-size: .9em;
+        margin-bottom: 2.2rem;
+    }
+
 }
