@@ -55,3 +55,12 @@
       transform: translateX(-100%);
     }
 }
+
+@keyframes slideMenu{
+    from{
+        transform: translateX(150%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
