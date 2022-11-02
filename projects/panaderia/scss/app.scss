@@ -59,7 +59,7 @@ body{
     }
 
     &_a-rrss{
-        transition: all .7s ease;
+        transition: all .5s ease;
 
         &:hover{
             color: var(--hover-color);
@@ -243,6 +243,35 @@ body{
     display: flex;
 }
 
+.footer{
+    width: 100%;
+    background-color: var(--bg-footer);
+    padding: 1rem 2rem;
+
+    &_contactos{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+
+        color: var(--txt-button);
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    &_a-rrss{
+        transition: all .5s ease;
+
+        &:hover{
+            color: var(--hover-color);
+        }
+    }
+
+    &_svg-rrss{
+        margin: .3rem 0;
+    }
+}
+
 
 /*-------------------------Responsive-----------------------*/
 
@@ -329,5 +358,25 @@ body{
 
     .pop_up-p{
         font-size: 1.2rem;
+    }
+}
+
+@media screen and(max-width: 700px){
+    .footer_contactos{
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_box-rrss{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer_svg-rrss{
+        margin: 1rem .3rem 0rem;
     }
 }

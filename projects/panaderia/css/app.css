@@ -14,7 +14,8 @@
   --nav-bg: #d7c9af;
   --txt-button: #fceccf;
   --hover-color: #f99002;
-  --overlay-bg: #d7c9af;
+  --overlay-bg: #a8946e;
+  --bg-footer: #a19682;
 }
 
 img, picture, video, iframe, figure {
@@ -207,8 +208,8 @@ body {
           user-select: text;
 }
 .header_a-rrss {
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .header_a-rrss:hover {
   color: var(--hover-color);
@@ -413,6 +414,40 @@ body {
   display: flex;
 }
 
+.footer {
+  width: 100%;
+  background-color: var(--bg-footer);
+  padding: 1rem 2rem;
+}
+.footer_contactos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--txt-button);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.footer_a-rrss {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.footer_a-rrss:hover {
+  color: var(--hover-color);
+}
+.footer_svg-rrss {
+  margin: 0.3rem 0;
+}
+
 /*-------------------------Responsive-----------------------*/
 @media screen and (max-width: 1050px) {
   .header_button {
@@ -510,5 +545,42 @@ body {
 
   .pop_up-p {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer_contactos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer_box-rrss {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer_svg-rrss {
+    margin: 1rem 0.3rem 0rem;
   }
 }
