@@ -84,6 +84,7 @@ body{
         display: flex; 
         flex-flow: row nowrap;
         justify-content: space-around;
+        align-items: center;
     }
 
     &_button{
@@ -126,6 +127,16 @@ body{
         color: var(--txt-button);
         cursor: pointer;
         display: none;
+    }
+
+    &_close-btn{
+        width: 2rem;
+        height: 2rem;
+        color: var(--txt-button);
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }
 
@@ -245,6 +256,10 @@ body{
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
+
+    .pop_up-img{
+        width: 60%;
+    }
 }
 
 @media screen and(max-width: 800px){
@@ -254,7 +269,29 @@ body{
     }
 
     .header_box-btns{
-        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        background-color: var(--nav-bg);
+
+        display: flex; 
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -150%;
+        z-index: 2;
+        transition: all .5s ease-out;
+    }
+
+    .header_box-btns.active{
+        right: 0;
+    }
+
+    .header_button{
+        margin: 1rem;
     }
 
     .header_svg-menu{
@@ -263,7 +300,11 @@ body{
     }
 
     .header_svg-basket{
-        margin: 0 1rem;
+        margin: 0 2rem;
+    }
+
+    .header_close-btn{
+        display: block;
     }
 }
 
@@ -275,9 +316,18 @@ body{
     .header_h1-logo{
         font-size: 2.5rem;
     }
+
     .gallery_wrapper-items{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
+    }
+
+    .pop_up-img{
+        width: 80%;
+    }
+
+    .pop_up-p{
+        font-size: 1.2rem;
     }
 }
